@@ -1,0 +1,11 @@
+*ERROR* 	v8.1.1	2023/09/21 - 16:37:17: Array
+(
+    [0] => Não é possível instalar o módulo "ps_edition_basic"
+    [1] => SQLSTATE[42S02]: Base table or view not found: 1146 Table 'sparkload.ps_employee' doesn't exist
+)
+
+*ERROR* 	v8.1.1	2023/09/21 - 16:51:29: Array
+(
+    [0] => Não é possível instalar o módulo "mbeshipping"
+)
+
