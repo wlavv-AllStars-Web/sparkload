@@ -347,4 +347,28 @@ class ProductRepository
     {
         return Product::getPriceStatic($productId, false, $attributeId, 6);
     }
+
+    /**
+     * @param int $productId
+     * @param int $attributeId
+     * @param int|null $id_cart Needed to avoid a Fatal Error from PrestaShop
+     *
+     * @return float
+     */
+    public function getSalePrice($productId, $attributeId, $id_cart = null)
+    {
+        return Product::getPriceStatic(
+            $productId,
+            true,
+            $attributeId,
+            6,
+            null,
+            false,
+            true,
+            1,
+            false,
+            null,
+            $id_cart
+        );
+    }
 }

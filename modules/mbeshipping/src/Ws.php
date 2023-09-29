@@ -595,7 +595,7 @@ class Ws
                 $products,
                 $shipperType,
                 $reference,
-                $pickup_batch_id,
+                $pickup_batch_id
             );
         }
         return $result;

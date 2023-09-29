@@ -319,7 +319,7 @@ class MbeWs
 
             $args->RequestContainer->Shipment->Notes = mb_substr($notes, 0, 50, 'utf8');
 
-            $args->RequestContainer->Shipment->ShipmentOrigin = "MBE eShip Prestashop 2.0.8";
+            $args->RequestContainer->Shipment->ShipmentOrigin = "MBE eShip Prestashop 2.1.1";
 
             $this->logVar('CREATE SHIPPING ARGS');
             $this->logVar($args);
@@ -459,7 +459,7 @@ class MbeWs
 
             $args->RequestContainer->MbeTracking = $tracking;
             $args->RequestContainer->CustomerAsReceiver = true;
-            $args->RequestContainer->ShipmentOrigin = "MBE eShip Prestashop 2.0.8";
+            $args->RequestContainer->ShipmentOrigin = "MBE eShip Prestashop 2.1.1";
             $args->RequestContainer->Referring = '';
 
             $this->logVar($args, 'RETURN SHIPPING ARGS');
@@ -677,7 +677,7 @@ class MbeWs
             $args->RequestContainer->Shipment->DeliveryDirect = false;
             $args->RequestContainer->Shipment->MBESafeValue = false;
             $args->RequestContainer->Shipment->LabelFormat = "OLD";
-            $args->RequestContainer->Shipment->ShipmentOrigin = "MBE eShip Prestashop";
+            $args->RequestContainer->Shipment->ShipmentOrigin = "MBE eShip Prestashop 2.1.1";
             $args->RequestContainer->Shipment->Referring = $reference;
 
             $request_products = [];

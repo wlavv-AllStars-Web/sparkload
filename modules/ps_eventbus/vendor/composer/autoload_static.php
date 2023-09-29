@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInitfe2ff6ff9a4f85d9ca9112eef92e906e
+class ComposerStaticInitc60c5dca1af60a548980cd47d0b7d292
 {
     public static $files = array (
         '9c67151ae59aff4788964ce8eb2a0f43' => __DIR__ . '/..' . '/clue/stream-filter/src/functions_include.php',
@@ -319,6 +319,7 @@ class ComposerStaticInitfe2ff6ff9a4f85d9ca9112eef92e906e
         'PrestaShop\\Module\\PsEventbus\\Decorator\\CurrencyDecorator' => __DIR__ . '/../..' . '/src/Decorator/CurrencyDecorator.php',
         'PrestaShop\\Module\\PsEventbus\\Decorator\\CustomPriceDecorator' => __DIR__ . '/../..' . '/src/Decorator/CustomPriceDecorator.php',
         'PrestaShop\\Module\\PsEventbus\\Decorator\\CustomerDecorator' => __DIR__ . '/../..' . '/src/Decorator/CustomerDecorator.php',
+        'PrestaShop\\Module\\PsEventbus\\Decorator\\LanguageDecorator' => __DIR__ . '/../..' . '/src/Decorator/LanguageDecorator.php',
         'PrestaShop\\Module\\PsEventbus\\Decorator\\ManufacturerDecorator' => __DIR__ . '/../..' . '/src/Decorator/ManufacturerDecorator.php',
         'PrestaShop\\Module\\PsEventbus\\Decorator\\PayloadDecorator' => __DIR__ . '/../..' . '/src/Decorator/PayloadDecorator.php',
         'PrestaShop\\Module\\PsEventbus\\Decorator\\ProductDecorator' => __DIR__ . '/../..' . '/src/Decorator/ProductDecorator.php',
@@ -351,6 +352,7 @@ class ComposerStaticInitfe2ff6ff9a4f85d9ca9112eef92e906e
         'PrestaShop\\Module\\PsEventbus\\Provider\\CustomProductCarrierDataProvider' => __DIR__ . '/../..' . '/src/Provider/CustomProductCarrierDataProvider.php',
         'PrestaShop\\Module\\PsEventbus\\Provider\\CustomerDataProvider' => __DIR__ . '/../..' . '/src/Provider/CustomerDataProvider.php',
         'PrestaShop\\Module\\PsEventbus\\Provider\\GoogleTaxonomyDataProvider' => __DIR__ . '/../..' . '/src/Provider/GoogleTaxonomyDataProvider.php',
+        'PrestaShop\\Module\\PsEventbus\\Provider\\LanguageDataProvider' => __DIR__ . '/../..' . '/src/Provider/LanguageDataProvider.php',
         'PrestaShop\\Module\\PsEventbus\\Provider\\ManufacturerDataProvider' => __DIR__ . '/../..' . '/src/Provider/ManufacturerDataProvider.php',
         'PrestaShop\\Module\\PsEventbus\\Provider\\ModuleDataProvider' => __DIR__ . '/../..' . '/src/Provider/ModuleDataProvider.php',
         'PrestaShop\\Module\\PsEventbus\\Provider\\OrderDataProvider' => __DIR__ . '/../..' . '/src/Provider/OrderDataProvider.php',
@@ -471,10 +473,10 @@ class ComposerStaticInitfe2ff6ff9a4f85d9ca9112eef92e906e
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInitfe2ff6ff9a4f85d9ca9112eef92e906e::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInitfe2ff6ff9a4f85d9ca9112eef92e906e::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInitfe2ff6ff9a4f85d9ca9112eef92e906e::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInitfe2ff6ff9a4f85d9ca9112eef92e906e::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInitc60c5dca1af60a548980cd47d0b7d292::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInitc60c5dca1af60a548980cd47d0b7d292::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInitc60c5dca1af60a548980cd47d0b7d292::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInitc60c5dca1af60a548980cd47d0b7d292::$classMap;
 
         }, null, ClassLoader::class);
     }

@@ -25,10 +25,9 @@ if (!defined('_PS_VERSION_')) {
 }
 
 use Configuration;
-use Klaviyo\Exception\KlaviyoException;
-use Klaviyo\Klaviyo;
-use Klaviyo\Model\EventModel;
-use Klaviyo\Model\ProfileModel;
+use KlaviyoV3Sdk\Exception\KlaviyoApiException;
+use KlaviyoV3Sdk\Klaviyo;
+use KlaviyoV3Sdk\KlaviyoV3Api;
 
 class KlaviyoApiWrapper
 {
@@ -37,7 +36,7 @@ class KlaviyoApiWrapper
 
     public function __construct()
     {
-        $this->client = new Klaviyo(Configuration::get('KLAVIYO_PRIVATE_API'), Configuration::get('KLAVIYO_PUBLIC_API'));
+        $this->client = new KlaviyoV3Api(Configuration::get('KLAVIYO_PUBLIC_API'), Configuration::get('KLAVIYO_PRIVATE_API'));
     }
 
     /**
@@ -47,31 +46,33 @@ class KlaviyoApiWrapper
      */
     public function getLists()
     {
-        return $this->client->lists->getLists();
+        return $this->client->getLists();
     }
 
     /**
      * Subscribe email to the Subscriber List selected on configuration page (if selected).
      *
      * @param string $email
-     * @throws KlaviyoException
+     * @throws KlaviyoApiException
      */
-    public function subscribeCustomer($email, $customProperties = [])
+    public function subscribeCustomer($email)
     {
-        $profile = new ProfileModel(
-            array_merge(
-                array(
-                    '$email' => $email,
-                    '$source' => 'PrestaShop',
-                    '$consent' => array('email'),
-                ),
-                $customProperties
+        $profile = array(
+            'type' => 'profile',
+            'attributes' => array(
+                'email' => $email,
+                'subscriptions' => array(
+                    'email' => [
+                        'MARKETING'
+                    ]
+                )
             )
         );
+
         $listId = Configuration::get('KLAVIYO_SUBSCRIBER_LIST');
 
         if ($listId) {
-            $this->client->lists->subscribeMembersToList($listId, array($profile));
+            $this->client->subscribeMembersToList($listId, array($profile));
         }
     }
 
@@ -80,10 +81,10 @@ class KlaviyoApiWrapper
      *
      * @param array $event
      * @return bool
-     * @throws KlaviyoException
+     * @throws KlaviyoApiException
      */
     public function trackEvent(array $eventConfig)
     {
-        return (bool) $this->client->publicAPI->track(new EventModel($eventConfig));
+        return (bool) $this->client->createEvent($eventConfig);
     }
 }

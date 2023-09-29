@@ -23,8 +23,9 @@
  * @copyright Since 2007 PrestaShop SA and Contributors
  * @license   https://opensource.org/licenses/OSL-3.0 Open Software License (OSL 3.0)
  */
-/* Debug only */
 
+/* Debug only */
+define('_PS_MODE_DEV_', true);
 if (!defined('_PS_MODE_DEV_')) {
 define('_PS_MODE_DEV_', false);
 }

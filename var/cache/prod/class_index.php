@@ -736,7 +736,7 @@
   ),
   'Cart' => 
   array (
-    'path' => NULL,
+    'path' => 'override\\classes\\Cart.php',
     'type' => 'class',
   ),
   'CartChecksum' => 
@@ -751,7 +751,7 @@
   ),
   'CartController' => 
   array (
-    'path' => NULL,
+    'path' => 'override\\controllers\\front\\CartController.php',
     'type' => 'class',
   ),
   'CartControllerCore' => 
@@ -2196,7 +2196,7 @@
   ),
   'OrderInvoice' => 
   array (
-    'path' => NULL,
+    'path' => 'override\\classes\\order\\OrderInvoice.php',
     'type' => 'class',
   ),
   'OrderInvoiceCore' => 
@@ -2561,7 +2561,7 @@
   ),
   'Product' => 
   array (
-    'path' => NULL,
+    'path' => 'override\\classes\\Product.php',
     'type' => 'class',
   ),
   'ProductAssembler' => 

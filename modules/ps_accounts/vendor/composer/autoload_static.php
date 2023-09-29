@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit4528a2e0f4902f0590c1bdfce79ee9cf
+class ComposerStaticInit74c27da6577b7c4b371e292d880893da
 {
     public static $files = array (
         'a4a119a56e50fbb293281d9a48007e0e' => __DIR__ . '/..' . '/symfony/polyfill-php80/bootstrap.php',
@@ -519,11 +519,17 @@ class ComposerStaticInit4528a2e0f4902f0590c1bdfce79ee9cf
         'PrestaShop\\Module\\PsAccounts\\Adapter\\Configuration' => __DIR__ . '/../..' . '/src/Adapter/Configuration.php',
         'PrestaShop\\Module\\PsAccounts\\Adapter\\Link' => __DIR__ . '/../..' . '/src/Adapter/Link.php',
         'PrestaShop\\Module\\PsAccounts\\Api\\Client\\AccountsClient' => __DIR__ . '/../..' . '/src/Api/Client/AccountsClient.php',
+        'PrestaShop\\Module\\PsAccounts\\Api\\Client\\CircuitBreaker\\CircuitBreaker' => __DIR__ . '/../..' . '/src/Api/Client/CircuitBreaker/CircuitBreaker.php',
+        'PrestaShop\\Module\\PsAccounts\\Api\\Client\\CircuitBreaker\\CircuitBreakerFactory' => __DIR__ . '/../..' . '/src/Api/Client/CircuitBreaker/CircuitBreakerFactory.php',
+        'PrestaShop\\Module\\PsAccounts\\Api\\Client\\CircuitBreaker\\CircuitBreakerTest' => __DIR__ . '/../..' . '/src/Api/Client/CircuitBreaker/CircuitBreakerTest.php',
+        'PrestaShop\\Module\\PsAccounts\\Api\\Client\\CircuitBreaker\\InMemoryCircuitBreaker' => __DIR__ . '/../..' . '/src/Api/Client/CircuitBreaker/InMemoryCircuitBreaker.php',
+        'PrestaShop\\Module\\PsAccounts\\Api\\Client\\CircuitBreaker\\PersistentCircuitBreaker' => __DIR__ . '/../..' . '/src/Api/Client/CircuitBreaker/PersistentCircuitBreaker.php',
         'PrestaShop\\Module\\PsAccounts\\Api\\Client\\ClientInterface' => __DIR__ . '/../..' . '/src/Api/Client/ClientInterface.php',
         'PrestaShop\\Module\\PsAccounts\\Api\\Client\\Guzzle\\AbstractGuzzleClient' => __DIR__ . '/../..' . '/src/Api/Client/Guzzle/AbstractGuzzleClient.php',
         'PrestaShop\\Module\\PsAccounts\\Api\\Client\\Guzzle\\Guzzle5Client' => __DIR__ . '/../..' . '/src/Api/Client/Guzzle/Guzzle5Client.php',
         'PrestaShop\\Module\\PsAccounts\\Api\\Client\\Guzzle\\Guzzle7Client' => __DIR__ . '/../..' . '/src/Api/Client/Guzzle/Guzzle7Client.php',
         'PrestaShop\\Module\\PsAccounts\\Api\\Client\\Guzzle\\GuzzleClientFactory' => __DIR__ . '/../..' . '/src/Api/Client/Guzzle/GuzzleClientFactory.php',
+        'PrestaShop\\Module\\PsAccounts\\Api\\Client\\IndirectChannelClient' => __DIR__ . '/../..' . '/src/Api/Client/IndirectChannelClient.php',
         'PrestaShop\\Module\\PsAccounts\\Api\\Client\\ServicesBillingClient' => __DIR__ . '/../..' . '/src/Api/Client/ServicesBillingClient.php',
         'PrestaShop\\Module\\PsAccounts\\Api\\Client\\SsoClient' => __DIR__ . '/../..' . '/src/Api/Client/SsoClient.php',
         'PrestaShop\\Module\\PsAccounts\\Configuration\\ConfigOptionsResolver' => __DIR__ . '/../..' . '/src/Configuration/ConfigOptionsResolver.php',
@@ -1185,10 +1191,10 @@ class ComposerStaticInit4528a2e0f4902f0590c1bdfce79ee9cf
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit4528a2e0f4902f0590c1bdfce79ee9cf::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit4528a2e0f4902f0590c1bdfce79ee9cf::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInit4528a2e0f4902f0590c1bdfce79ee9cf::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInit4528a2e0f4902f0590c1bdfce79ee9cf::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit74c27da6577b7c4b371e292d880893da::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit74c27da6577b7c4b371e292d880893da::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInit74c27da6577b7c4b371e292d880893da::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInit74c27da6577b7c4b371e292d880893da::$classMap;
 
         }, null, ClassLoader::class);
     }

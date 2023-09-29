@@ -34,7 +34,7 @@ class KlaviyoPsAutomation extends KlaviyoPsModule
         $this->module_key = '11f15f4ff8f9102505780531ab77ee27';
         $this->name = 'klaviyopsautomation';
         $this->author = 'PrestaShop Partners';
-        $this->version = '1.3.1';
+        $this->version = '1.4.0';
 
         parent::__construct();
 

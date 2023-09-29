@@ -82,7 +82,7 @@ class Mbeshipping extends CarrierModule
         $this->name = 'mbeshipping';
         $this->module_key = 'e127bd423c8ec24900475202bb4a131a';
         $this->tab = 'shipping_logistics';
-        $this->version = '2.1.0';
+        $this->version = '2.1.1';
         $this->author = 'MBE Worldwide S.p.A.';
 
         $this->bootstrap = true;
@@ -919,7 +919,7 @@ class Mbeshipping extends CarrierModule
                 $values['MBESHIPPING_PICKUP_CUTOFF_PREFERRED_TO'],
                 $values['MBESHIPPING_PICKUP_CUTOFF_ALTERNATIVE_FROM'],
                 $values['MBESHIPPING_PICKUP_CUTOFF_ALTERNATIVE_TO'],
-                $values['MBESHIPPING_PICKUP_NOTES'],
+                $values['MBESHIPPING_PICKUP_NOTES']
             );
 
             if (!$ws_result) {
@@ -2942,7 +2942,7 @@ class Mbeshipping extends CarrierModule
 
     public function getValuesTabPickupManagement() {
         $inputs = $this->getInitializedInputValues(
-            $this->getFormTabPickupManagement(),
+            $this->getFormTabPickupManagement()
         );
 
         $pickupDataInputs = [

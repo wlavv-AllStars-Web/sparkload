@@ -41,7 +41,7 @@ class Ps_eventbus extends Module
     /**
      * @var string
      */
-    const VERSION = '2.3.1';
+    const VERSION = '2.3.2';
 
     /**
      * @var array
@@ -84,6 +84,9 @@ class Ps_eventbus extends Module
         'actionObjectImageAddAfter',
         'actionObjectImageDeleteAfter',
         'actionObjectImageUpdateAfter',
+        'actionObjectLanguageAddAfter',
+        'actionObjectLanguageDeleteAfter',
+        'actionObjectLanguageUpdateAfter',
         'actionObjectManufacturerAddAfter',
         'actionObjectManufacturerDeleteAfter',
         'actionObjectManufacturerUpdateAfter',
@@ -141,7 +144,7 @@ class Ps_eventbus extends Module
         $this->author = 'PrestaShop';
         $this->need_instance = 0;
         $this->bootstrap = true;
-        $this->version = '2.3.1';
+        $this->version = '2.3.2';
         $this->module_key = '7d76e08a13331c6c393755886ec8d5ce';
 
         parent::__construct();
@@ -278,6 +281,65 @@ class Ps_eventbus extends Module
             $this->insertIncrementalSyncObject(
                 $image->id_product,
                 Config::COLLECTION_PRODUCTS,
+                date(DATE_ATOM),
+                $this->shopId,
+                true
+            );
+        }
+    }
+
+    /**
+     * @param array $parameters
+     *
+     * @return void
+     */
+    public function hookActionObjectLanguageDeleteAfter($parameters)
+    {
+        $language = $parameters['object'];
+        if (isset($language->id)) {
+            // $this->sendLiveSync(['languages'], $language->id, 'delete');
+            $this->insertDeletedObject(
+                $language->id,
+                Config::COLLECTION_LANGUAGES,
+                date(DATE_ATOM),
+                $this->shopId
+            );
+        }
+    }
+
+    /**
+     * @param array $parameters
+     *
+     * @return void
+     */
+    public function hookActionObjectLanguageAddAfter($parameters)
+    {
+        $language = $parameters['object'];
+        if (isset($language->id)) {
+            // $this->sendLiveSync(['languages'], $language->id_product, 'upsert');
+            $this->insertIncrementalSyncObject(
+                $language->id,
+                Config::COLLECTION_LANGUAGES,
+                date(DATE_ATOM),
+                $this->shopId,
+                true
+            );
+        }
+    }
+
+    /**
+     * @param array $parameters
+     *
+     * @return void
+     */
+    public function hookActionObjectLanguageUpdateAfter($parameters)
+    {
+        $language = $parameters['object'];
+        if (isset($language->id)) {
+            // $this->sendLiveSync(['languages'], $language->id_product, 'upsert');
+            $this->insertIncrementalSyncObject(
+                $language->id,
+                Config::COLLECTION_LANGUAGES,
                 date(DATE_ATOM),
                 $this->shopId,
                 true

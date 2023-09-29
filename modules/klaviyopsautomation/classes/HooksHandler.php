@@ -27,12 +27,16 @@ if (!defined('_PS_VERSION_')) {
 use Configuration;
 use CustomerCore;
 use KlaviyoPsModule;
-
+use KlaviyoPs\Classes\PrestashopServices\LoggerService;
+use KlaviyoV3Sdk\Exception\KlaviyoApiException;
 class HooksHandler
 {
     /**
      * @var KlaviyoPsModule
      */
+    const NEWSLETTER_SUBSCRIPTION = 0;
+    const NEWSLETTER_UNSUBSCRIPTION = 1;
+    const ERROR_SUBSCRIBING_CUSTOMER = 'Error while trying to subscribe to Klaviyo list, customer with email: ';
     private $klaviyoModule;
 
     /**
@@ -61,9 +65,12 @@ class HooksHandler
             !$customer->deleted &&
             Configuration::get('KLAVIYO_PRIVATE_API')
         ) {
-            $customProperties = $this->getPropertiesFromCustomer($customer);
-            $api = new KlaviyoApiWrapper();
-            $api->subscribeCustomer($customer->email, $customProperties);
+            try {
+                $api = new KlaviyoApiWrapper();
+                $api->subscribeCustomer($customer->email);
+            } catch (KlaviyoApiException $e) {
+                $this->logApiError(self::ERROR_SUBSCRIBING_CUSTOMER . $customer->email);
+            }
         }
     }
 
@@ -75,9 +82,17 @@ class HooksHandler
      */
     public function handleActionNewsletterSubscription(array $params)
     {
-        if (!$params['error'] && Configuration::get('KLAVIYO_PRIVATE_API')) {
-            $api = new KlaviyoApiWrapper();
-            $api->subscribeCustomer($params['email']);
+        if (
+            $params['action'] == static::NEWSLETTER_SUBSCRIPTION &&
+            !$params['error'] &&
+            Configuration::get('KLAVIYO_PRIVATE_API')
+        ) {
+            try {
+                $api = new KlaviyoApiWrapper();
+                $api->subscribeCustomer($params['email']);
+            } catch (KlaviyoApiException $e) {
+                $this->logApiError(self::ERROR_SUBSCRIBING_CUSTOMER . $params['email']);
+            }
         }
     }
 

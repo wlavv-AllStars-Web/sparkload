@@ -36,6 +36,7 @@ class Configuration
     public const PS_ACCOUNTS_USER_FIREBASE_ID_TOKEN = 'PS_ACCOUNTS_USER_FIREBASE_ID_TOKEN';
     public const PS_ACCOUNTS_USER_FIREBASE_REFRESH_TOKEN = 'PS_ACCOUNTS_USER_FIREBASE_REFRESH_TOKEN';
     public const PS_ACCOUNTS_USER_FIREBASE_REFRESH_TOKEN_FAILURE = 'PS_ACCOUNTS_USER_FIREBASE_REFRESH_TOKEN_FAILURE';
+    public const PS_ACCOUNTS_SHOP_UNLINKED_AUTO = 'PS_ACCOUNTS_SHOP_UNLINKED_AUTO';
 
     // PS Backend User
     public const PS_ACCOUNTS_EMPLOYEE_ID = 'PS_ACCOUNTS_EMPLOYEE_ID';
@@ -189,5 +190,29 @@ class Configuration
     public function setRaw($key, $values, $html = false, $idShopGroup = null, $idShop = null)
     {
         return \Configuration::updateValue($key, $values, $html, $idShopGroup, $idShop);
+    }
+
+    /**
+     * @param string $key
+     * @param int|null $idShopGroup
+     * @param int|null $idShop
+     * @param string|bool $default
+     *
+     * @return mixed
+     *
+     * @throws \PrestaShopDatabaseException
+     * @throws \PrestaShopException
+     */
+    public function getUncached($key, $idShopGroup = null, $idShop = null, $default = false)
+    {
+        $id = \Configuration::getIdByName($key, $idShopGroup, $idShop);
+        if ($id > 0) {
+            $found = (new \Configuration($id));
+            $found->clearCache();
+
+            return $found->value;
+        }
+
+        return $default;
     }
 }

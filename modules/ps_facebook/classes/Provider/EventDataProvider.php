@@ -22,6 +22,7 @@ namespace PrestaShop\Module\PrestashopFacebook\Provider;
 
 use Cart;
 use Context;
+use Currency;
 use Order;
 use PrestaShop\Module\PrestashopFacebook\Adapter\ConfigurationAdapter;
 use PrestaShop\Module\PrestashopFacebook\Adapter\ToolsAdapter;
@@ -291,10 +292,11 @@ class EventDataProvider
         } elseif ($isDelete) {
             //todo: when removing product from cart this hook gets called twice
             $type = 'RemoveProductFromCart';
-            $quantity = null;
         }
 
         $productName = Product::getProductName($idProduct, $idProductAttribute);
+
+        $cartId = $this->context->cookie->id_cart ?? null;
 
         $customData = [
             'content_name' => pSQL($productName),
@@ -305,7 +307,8 @@ class EventDataProvider
                     $idProductAttribute
                 ),
             ],
-            'num_items' => pSQL($quantity),
+            'currency' => $this->getCurrency(),
+            'value' => $this->productRepository->getSalePrice($idProduct, $idProductAttribute, $cartId),
         ];
 
         return [
@@ -406,11 +409,14 @@ class EventDataProvider
         $cart = $this->context->cart;
         $contents = $this->getProductContent($cart);
 
+        $numberOfItems = array_sum(array_column($contents, 'quantity'));
+
         $customData = [
             'contents' => $contents,
             'content_type' => 'product',
             'currency' => $this->getCurrency(),
             'value' => $cart->getOrderTotal(false),
+            'num_items' => $numberOfItems,
         ];
 
         return [
@@ -550,8 +556,15 @@ class EventDataProvider
         ];
     }
 
-    private function getCurrency()
+    private function getCurrency(): string
     {
-        return \Tools::strtolower($this->context->currency->iso_code);
+        if (!empty($this->context->currency->iso_code)) {
+            return \Tools::strtolower($this->context->currency->iso_code);
+        }
+        if (!empty($this->context->cookie->id_currency)) {
+            return \Tools::strtolower((new Currency($this->context->cookie->id_currency))->iso_code);
+        }
+
+        return \Tools::strtolower(Currency::getDefaultCurrency()->iso_code);
     }
 }

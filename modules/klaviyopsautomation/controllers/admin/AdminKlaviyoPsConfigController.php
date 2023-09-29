@@ -22,7 +22,7 @@ if (!defined('_PS_VERSION_')) {
     exit;
 }
 
-use Klaviyo\Exception\KlaviyoException;
+use KlaviyoV3Sdk\Exception\KlaviyoException;
 use KlaviyoPs\Classes\KlaviyoApiWrapper;
 use KlaviyoPs\Classes\BusinessLogicServices\OrderPayloadService;
 use KlaviyoPs\Classes\KlaviyoServices\CouponGeneratorService;
@@ -286,7 +286,10 @@ class AdminKlaviyoPsConfigController extends ModuleAdminController
 
         // Fetch lists for Account.
         $lists = [];
-        if ($this->module->getConfigurationValueOrNull('KLAVIYO_PRIVATE_API')) {
+        if (
+            $this->module->getConfigurationValueOrNull('KLAVIYO_PRIVATE_API')
+            && $this->module->getConfigurationValueOrNull('KLAVIYO_IS_SYNCING_SUBSCRIBERS')
+        ) {
             try {
                 $api = new KlaviyoApiWrapper();
                 $lists = $api->getLists();
@@ -309,11 +312,11 @@ class AdminKlaviyoPsConfigController extends ModuleAdminController
             ];
             foreach ($lists as $list) {
                 $list_arr[] = array(
-                    'id_option' => $list['list_id'],
-                    'name' => $list['list_name'],
-                    'value' => $list['list_id'],
+                    'id_option' => $list['id'],
+                    'name' => $list['attributes']['name'],
+                    'value' => $list['id'],
                     'default' => array(
-                        'value' => $list['list_id'],
+                        'value' => $list['id'],
                         'label' => 'list'
                     ),
                 );
@@ -640,8 +643,12 @@ class AdminKlaviyoPsConfigController extends ModuleAdminController
             header('Content-Type: application/force-download; charset=UTF-8');
             header('Content-disposition: attachment; filename="' . $filename . '"');
 
-            $this->ajaxRender($data);
-            exit;
+            if (version_compare(_PS_VERSION_, '1.7.5.0', '>=')) {
+                $this->ajaxRender($data);
+                exit;
+            } else {
+                $this->ajaxDie($data);
+            }
         } catch (KlaviyoException $e) {
             $this->errors[] = $e->getMessage();
         }
