@@ -23,39 +23,19 @@
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  *}
 
-<div class="block_newsletter col-lg-8 col-md-12 col-sm-12" id="blockEmailSubscription_{$hookName}">
+<div class="ns col-md-3" id="blockEmailSubscription_{$hookName}">
   <div class="row">
-    <p id="block-newsletter-label" class="col-md-5 col-xs-12">{l s='Get our latest news and special sales' d='Shop.Theme.Global'}</p>
-    <div class="col-md-7 col-xs-12">
+    <p class="h3 hidden-sm-down">Newsletter Subscribe</p>
+    <p class="hidden-sm-down" style="color:#cfcfcf;">{l s='Subscribe to our mailing list to get the updates to your email inbox.' d='Shop.Theme.Actions'}</p>
       <form action="{$urls.current_url}#blockEmailSubscription_{$hookName}" method="post">
-        <div class="row">
-          <div class="col-xs-12">
-            <input
-              class="btn btn-primary float-xs-right hidden-xs-down"
-              name="submitNewsletter"
-              type="submit"
-              value="{l s='Subscribe' d='Shop.Theme.Actions'}"
-            >
-            <input
-              class="btn btn-primary float-xs-right hidden-sm-up"
-              name="submitNewsletter"
-              type="submit"
-              value="{l s='OK' d='Shop.Theme.Actions'}"
-            >
-            <div class="input-wrapper">
-              <input
-                name="email"
-                type="email"
-                value="{$value}"
-                placeholder="{l s='Your email address' d='Shop.Forms.Labels'}"
-                aria-labelledby="block-newsletter-label"
-                required
-              >
-            </div>
-            <input type="hidden" name="blockHookName" value="{$hookName}" />
-            <input type="hidden" name="action" value="0">
-            <div class="clearfix"></div>
-          </div>
+      <input name="email" type="email" value="{$value}" class="ni" placeholder="{l s='Your email address' d='Shop.Forms.Labels'}" aria-labelledby="block-newsletter-label" required >
+    <label  style="text-align: left;padding-top: 14px;">
+          <input name="AGREE_TO_TERMS" type="checkbox" value="1" required=""><a href="https://eculimit.com/privacy-policy" target="_blank" style="padding-left: 4px;text-align: left; color:#ed1921!important;">I have read and agree to the terms &amp; conditions</a>
+      </label>
+      <input type="hidden" name="blockHookName" value="{$hookName}" />
+      <input type="hidden" name="action" value="0">
+    <input class="spa-btn-trans" value="{l s='Sign up' d='Shop.Theme.Actions'}" name="submitNewsletter" type="submit" style="width: 85px;padding: 4px;">
+<!--
           <div class="col-xs-12">
               {if $conditions}
                 <p>{$conditions}</p>
@@ -70,7 +50,7 @@
                 {hook h='displayGDPRConsent' id_module=$id_module}
               {/if}
           </div>
-        </div>
+          -->
       </form>
     </div>
   </div>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<module>
+    <name>ets_extraoptions</name>
+    <displayName><![CDATA[Opciones Adicionales]]></displayName>
+    <version><![CDATA[1.1.4]]></version>
+    <description><![CDATA[Le permite crear opciones globales que se aplican a todos los productos existentes y el impacto en el precio de cada opci&oacute;n. M&aacute;s r&aacute;pido y f&aacute;cil de administrar que las combinaciones predeterminadas de PrestaShop]]></description>
+    <author><![CDATA[PrestaHero]]></author>
+    <tab><![CDATA[front_office_features]]></tab>
+    <is_configurable>1</is_configurable>
+    <need_instance>0</need_instance>
+</module>

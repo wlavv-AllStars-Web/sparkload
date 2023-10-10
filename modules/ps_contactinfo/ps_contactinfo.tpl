@@ -25,6 +25,7 @@
 
 <div class="block-contact col-md-3 links wrapper">
     <div class="hidden-sm-down">
+        <img class="logo img-fluid" src="/img/logo-1696247261.jpg" alt="sparkload" width="300" height="114">
         <p class="h4 text-uppercase block-contact-title">{l s='Store information' d='Shop.Theme.Global'}</p>
         {$contact_infos.address.formatted nofilter}
         {if $contact_infos.phone}

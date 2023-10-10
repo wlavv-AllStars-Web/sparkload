@@ -26,8 +26,70 @@
 
 {block name='content'}
 
-  <section id="main">
+<section id="main" style="background-color:#fff;">
+{if $page.page_name == 'index'}
+<h2 class="stpr" align="center" >Start working with professionals</h2>
+<div style="display:flex;gap: 13px;padding-bottom: 34px;">
+ <div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front toni">
+      <p class="crd">LOGIN</p>
+    </div>
+    <div class="flip-card-back toni">
+      <p class="crd-o">Register in less than 3 minutes</p>
+    </div>
+  </div>
+</div> 
+ <div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front toni">
+      <p class="crd">BUY CREDITS</p>
+    </div>
+    <div class="flip-card-back toni">
+      <p class="crd-o">Paypal Accepted, Credit card, secure methods</p>
+    </div>
+  </div>
+</div> 
+ <div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front toni">
+      <p class="crd">UPLOAD YOUR FILE</p>
+    </div>
+    <div class="flip-card-back toni">
+      <p class="crd-o">Attach your ORI file and select option</p>
+    </div>
+  </div>
+</div> 
+ <div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front toni">
+      <p class="crd">DOWNLOAD YOUR FILE</p>
+    </div>
+    <div class="flip-card-back toni">
+      <p class="crd-o">Will receive an email as soon as it`s ready to download</p>
+    </div>
+  </div>
+</div>
+</div>
+<div style="width:100%;padding-bottom:4%;padding-top:2%;" align="center">
+  <div class="spaa-btn-red">REGISTER NOW</div>
+</div>
+<div style="display:flex;">
+<div style="width:50%;">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/iqwEAlAtPms?si=bUSdhXaAuConL0xC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+<div style="width:50%;margin-left:33px;">
+<h1 class="t" align="left" style="padding-top: 50px; margin-bottom: -21px;">ABOUT US</h1>
+<h2 class="stpr" style="letter-spacing: 1px; line-height: 24px;color:#34343C;text-transform: initial;" align="left">Eculimit is founded by high experienced and qualified engineers in chiptuning sector that after many years tuning vehicles perceived a market hole to help other companies as far as file services is concerned. Since Eculimit was created, many tuners have trusted us to tune their customers vehicles.</h2>
+</div>
+</div>
+<div style="width:100%;padding-top:2%;" align="center">
+  <div class="spaa-btn-red">FAQ</div>
+</div>
+</div>
+</div>
 
+{/if}
     {block name='page_header_container'}
       {block name='page_title' hide}
         <header class="page-header">

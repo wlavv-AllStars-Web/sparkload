@@ -59,7 +59,7 @@ Disallow: /*controller=search
 Disallow: /*controller=statistics
 Disallow: /*controller=attachment
 Disallow: /*controller=guest-tracking
-# Directories for 192.168.1.64:86
+# Directories for 192.168.1.68:82
 Disallow: /app/
 Disallow: /cache/
 Disallow: /classes/
@@ -81,19 +81,19 @@ Disallow: /var/
 Disallow: /vendor/
 Disallow: /webservice/
 # Files
-Disallow: /password-recovery
 Disallow: /address
 Disallow: /addresses
 Disallow: /login
-Disallow: /registration
 Disallow: /cart
 Disallow: /discount
+Disallow: /guest-tracking
 Disallow: /order-history
 Disallow: /identity
 Disallow: /my-account
+Disallow: /order
+Disallow: /order-confirmation
 Disallow: /order-follow
 Disallow: /credit-slip
-Disallow: /order
+Disallow: /password-recovery
+Disallow: /registration
 Disallow: /search
-Disallow: /guest-tracking
-Disallow: /order-confirmation

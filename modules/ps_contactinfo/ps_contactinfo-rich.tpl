@@ -24,6 +24,7 @@
  *}
 
 <div class="contact-rich">
+<img class="logo img-fluid" src="/img/logo-1696247261.jpg" alt="sparkload" width="300" height="114">
   <h4>{l s='Store information' d='Shop.Theme.Global'}</h4>
   <div class="block">
     <div class="icon"><i class="material-icons">&#xE55F;</i></div>
