@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.3.1, created on 2023-10-13 09:50:10
+/* Smarty version 4.3.1, created on 2023-10-13 10:14:31
   from 'module:ps_contactinfops_contactinfo.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.1',
-  'unifunc' => 'content_652904c217cde8_59097736',
+  'unifunc' => 'content_65290a776ecb40_54881317',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_652904c217cde8_59097736 (Smarty_Internal_Template $_smarty_tpl) {
+function content_65290a776ecb40_54881317 (Smarty_Internal_Template $_smarty_tpl) {
 ?>  
 <div class="block-contact col-md-3 links wrapper" align="center">
 <img class="logo img-fluid" src="/img/eculimiti-logo.webp" style="max-width: 46%;height: auto;padding-top: 33px;" alt="sparkload" width="300" height="114">

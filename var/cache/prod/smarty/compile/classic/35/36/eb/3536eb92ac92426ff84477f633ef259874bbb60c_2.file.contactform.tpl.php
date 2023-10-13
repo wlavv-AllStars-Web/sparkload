@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.3.1, created on 2023-10-13 09:49:58
+/* Smarty version 4.3.1, created on 2023-10-13 10:14:30
   from '/opt/lampp/htdocs/sparkload/themes/classic/modules/contactform/views/templates/widget/contactform.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.1',
-  'unifunc' => 'content_652904b6ec9d46_06273705',
+  'unifunc' => 'content_65290a7651b8a7_19712379',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_652904b6ec9d46_06273705 (Smarty_Internal_Template $_smarty_tpl) {
+function content_65290a7651b8a7_19712379 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
      <?php if ($_smarty_tpl->tpl_vars['notifications']->value) {?>
       <div class="col-xs-12 alert <?php if ($_smarty_tpl->tpl_vars['notifications']->value['nw_error']) {?>alert-danger<?php } else { ?>alert-success<?php }?>">

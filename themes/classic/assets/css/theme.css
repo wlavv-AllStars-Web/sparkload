@@ -129,6 +129,30 @@ color: #ed1921 !important;
   display: flex;
   gap: 3rem;
 }
+#contact-link:hover{
+  color: #fff!important;
+  font-family: "Roboto", Sans-serif!important;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  line-height: 20px;
+  letter-spacing: 1px;
+  margin-top: 6px!important;
+  display: flex;
+  gap: 3rem;
+}
+#contact-link:active{
+  color: #fff!important;
+  font-family: "Roboto", Sans-serif!important;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  line-height: 20px;
+  letter-spacing: 1px;
+  margin-top: 6px!important;
+  display: flex;
+  gap: 3rem;
+}
  .mst{
  color:#fff!important;
 }
@@ -140,6 +164,16 @@ border-bottom: 2px solid #fff;
   text-underline-offset: 4px;
   color: #fff;
   }
+  .msth:hover{
+    text-decoration: underline 2px #fff!important;
+    text-underline-offset: 4px!important;
+    color: #fff!important;
+    }
+    .msth:active{
+      text-decoration: underline 2px #fff!important;
+      text-underline-offset: 4px!important;
+      color: #fff!important;
+      }
 
  .btnr{
   background-color: #ED1921;
