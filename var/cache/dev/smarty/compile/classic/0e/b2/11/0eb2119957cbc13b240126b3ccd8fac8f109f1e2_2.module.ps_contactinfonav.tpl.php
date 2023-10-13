@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.1, created on 2023-10-06 17:14:24
+/* Smarty version 4.3.1, created on 2023-10-10 12:23:29
   from 'module:ps_contactinfonav.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.1',
-  'unifunc' => 'content_65203260e5c358_81740056',
+  'unifunc' => 'content_65253431d70ed8_02498800',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '0eb2119957cbc13b240126b3ccd8fac8f109f1e2' => 
     array (
       0 => 'module:ps_contactinfonav.tpl',
-      1 => 1696326105,
+      1 => 1696927946,
       2 => 'module',
     ),
   ),
@@ -20,10 +20,10 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_65203260e5c358_81740056 (Smarty_Internal_Template $_smarty_tpl) {
-$_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\xampp\\htdocs\\sparkload\\vendor\\smarty\\smarty\\libs\\plugins\\modifier.replace.php','function'=>'smarty_modifier_replace',),));
+function content_65253431d70ed8_02498800 (Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/opt/lampp/htdocs/sparkload/vendor/smarty/smarty/libs/plugins/modifier.replace.php','function'=>'smarty_modifier_replace',),));
 ?>
-<!-- begin C:\xampp\htdocs\sparkload/themes/classic/modules/ps_contactinfo/nav.tpl --> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<!-- begin /opt/lampp/htdocs/sparkload/themes/classic/modules/ps_contactinfo/nav.tpl --> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
  <style>
 
  </style>
@@ -58,5 +58,5 @@ echo call_user_func_array( $_smarty_tpl->smarty->registered_plugins[Smarty::PLUG
     <?php }?>
   </div>
 </div>
-<!-- end C:\xampp\htdocs\sparkload/themes/classic/modules/ps_contactinfo/nav.tpl --><?php }
+<!-- end /opt/lampp/htdocs/sparkload/themes/classic/modules/ps_contactinfo/nav.tpl --><?php }
 }

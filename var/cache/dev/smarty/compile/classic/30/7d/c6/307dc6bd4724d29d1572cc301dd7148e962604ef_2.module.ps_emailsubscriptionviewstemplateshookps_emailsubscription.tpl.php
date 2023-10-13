@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.1, created on 2023-10-06 17:14:25
+/* Smarty version 4.3.1, created on 2023-10-10 12:23:29
   from 'module:ps_emailsubscriptionviewstemplateshookps_emailsubscription.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.1',
-  'unifunc' => 'content_652032613ce499_49595532',
+  'unifunc' => 'content_65253431dac1f3_28769280',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '307dc6bd4724d29d1572cc301dd7148e962604ef' => 
     array (
       0 => 'module:ps_emailsubscriptionviewstemplateshookps_emailsubscription.tpl',
-      1 => 1696436384,
+      1 => 1696927946,
       2 => 'module',
     ),
   ),
@@ -20,8 +20,8 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_652032613ce499_49595532 (Smarty_Internal_Template $_smarty_tpl) {
-?><!-- begin C:\xampp\htdocs\sparkload/themes/classic/modules/ps_emailsubscription/views/templates/hook/ps_emailsubscription.tpl -->
+function content_65253431dac1f3_28769280 (Smarty_Internal_Template $_smarty_tpl) {
+?><!-- begin /opt/lampp/htdocs/sparkload/themes/classic/modules/ps_emailsubscription/views/templates/hook/ps_emailsubscription.tpl -->
 <div class="ns col-md-3" id="blockEmailSubscription_<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['hookName']->value, ENT_QUOTES, 'UTF-8');?>
 ">
   <div class="row">
@@ -66,5 +66,5 @@ function content_652032613ce499_49595532 (Smarty_Internal_Template $_smarty_tpl)
     </div>
   </div>
 </div>
-<!-- end C:\xampp\htdocs\sparkload/themes/classic/modules/ps_emailsubscription/views/templates/hook/ps_emailsubscription.tpl --><?php }
+<!-- end /opt/lampp/htdocs/sparkload/themes/classic/modules/ps_emailsubscription/views/templates/hook/ps_emailsubscription.tpl --><?php }
 }

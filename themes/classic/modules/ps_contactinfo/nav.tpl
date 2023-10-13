@@ -23,9 +23,26 @@
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  *}
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
- <style>
-
- </style>
+ <script>
+window.addEventListener('DOMContentLoaded', function () {
+  
+  if (window.location.pathname === '/content/4-about-us') {
+    // Se o URL corresponder, obtenha o elemento com o ID "about"
+    var aboutElement = document.getElementById('about');
+    }
+  if (window.location.pathname === '/contact-us') {
+    // Se o URL corresponder, obtenha o elemento com o ID "contacte"
+    var aboutElement = document.getElementById('contacte');
+}
+    // Verifique se o elemento existe
+    if (aboutElement) {
+      // Troque a classe do elemento
+      aboutElement.classList.remove('mst');
+      aboutElement.classList.add('msth');
+    }
+  
+});
+ </script>
 <div id="_desktop_contact_link" style="float:right;  color: #fff !important;">
   <div id="contact-link">
     {if $contact_infos.phone}
@@ -42,8 +59,8 @@
     {else}
       <a href="{$urls.pages.contact}" class="mst">{l s='NEWS' d='Shop.Theme.Global'}</a>
       <a href="{$urls.pages.contact}" class="mst">{l s='FAQ' d='Shop.Theme.Global'}</a>
-      <a href="{$urls.pages.contact}" class="mst" style="width: 78px;">{l s='ABOUT US' d='Shop.Theme.Global'}</a>
-      <a href="{$urls.pages.contact}"  class="mst">{l s='CONTACT' d='Shop.Theme.Global'}</a>
+      <a href="/content/4-about-us" class="mst" id="about" style="width: 78px;">{l s='ABOUT US' d='Shop.Theme.Global'}</a>
+      <a href="{$urls.pages.contact}"  class="mst"  id="contacte" >{l s='CONTACT' d='Shop.Theme.Global'}</a>
       <a href="{$urls.pages.contact}" class="btnr"><i class="fas fa-key"></i>{l s='REGISTER' d='Shop.Theme.Global'}</a>
       <a href="{$urls.pages.contact}" class="btnr" style="width: 99px;margin-left: -33px;"><i class="fas fa-user-alt"></i>{l s='LOG IN' d='Shop.Theme.Global'}</a>
   

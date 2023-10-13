@@ -364,10 +364,10 @@ class FrontContainer extends \PrestaShop\PrestaShop\Adapter\Container\LegacyCont
         $b = new \Doctrine\Persistence\Mapping\Driver\MappingDriverChain();
 
         $c = ($this->services['annotation_reader'] ?? ($this->services['annotation_reader'] = new \Doctrine\Common\Annotations\AnnotationReader()));
-        $d = new \Doctrine\ORM\Mapping\Driver\AnnotationDriver($c, [0 => 'C:\\xampp\\htdocs\\sparkload\\modules\\productcomments\\src\\Entity']);
-        $d->addExcludePaths([0 => 'C:\\xampp\\htdocs\\sparkload\\modules\\productcomments\\src\\Entity/index.php']);
+        $d = new \Doctrine\ORM\Mapping\Driver\AnnotationDriver($c, [0 => '/opt/lampp/htdocs/sparkload/modules/productcomments/src/Entity']);
+        $d->addExcludePaths([0 => '/opt/lampp/htdocs/sparkload/modules/productcomments/src/Entity/index.php']);
 
-        $b->addDriver(new \Doctrine\ORM\Mapping\Driver\AnnotationDriver($c, [0 => 'C:\\xampp\\htdocs\\sparkload\\src\\PrestaShopBundle\\Entity']), 'PrestaShop');
+        $b->addDriver(new \Doctrine\ORM\Mapping\Driver\AnnotationDriver($c, [0 => '/opt/lampp/htdocs/sparkload/src/PrestaShopBundle/Entity']), 'PrestaShop');
         $b->addDriver($d, 'PrestaShop\\Module\\ProductComment\\Entity');
 
         $a->setEntityNamespaces(['PrestaShopBundle\\Entity' => 'PrestaShop']);
@@ -375,7 +375,7 @@ class FrontContainer extends \PrestaShop\PrestaShop\Adapter\Container\LegacyCont
         $a->setQueryCache(new \Symfony\Component\Cache\Adapter\ArrayAdapter());
         $a->setResultCache(new \Symfony\Component\Cache\Adapter\ArrayAdapter());
         $a->setMetadataDriverImpl($b);
-        $a->setProxyDir('C:\\xampp\\htdocs\\sparkload/var/cache/dev\\/doctrine/orm/Proxies');
+        $a->setProxyDir('/opt/lampp/htdocs/sparkload/var/cache/dev//doctrine/orm/Proxies');
         $a->setProxyNamespace('Proxies');
         $a->setAutoGenerateProxyClasses(true);
         $a->setClassMetadataFactoryName('Doctrine\\ORM\\Mapping\\ClassMetadataFactory');
@@ -431,7 +431,7 @@ class FrontContainer extends \PrestaShop\PrestaShop\Adapter\Container\LegacyCont
      */
     protected function getPrestashop_Adapter_Module_Repository_ModuleRepositoryService()
     {
-        return $this->services['prestashop.adapter.module.repository.module_repository'] = new \PrestaShop\PrestaShop\Adapter\Module\Repository\ModuleRepository('C:\\xampp\\htdocs\\sparkload', 'C:\\xampp\\htdocs\\sparkload/modules/');
+        return $this->services['prestashop.adapter.module.repository.module_repository'] = new \PrestaShop\PrestaShop\Adapter\Module\Repository\ModuleRepository('/opt/lampp/htdocs/sparkload', '/opt/lampp/htdocs/sparkload/modules/');
     }
 
     /**
@@ -599,7 +599,7 @@ class FrontContainer extends \PrestaShop\PrestaShop\Adapter\Container\LegacyCont
      */
     protected function getPrestashop_Core_Localization_Cldr_Cache_AdapterService()
     {
-        return $this->services['prestashop.core.localization.cldr.cache.adapter'] = new \Symfony\Component\Cache\Adapter\FilesystemAdapter('CLDR', 0, 'C:\\xampp\\htdocs\\sparkload/var/cache/dev\\/localization');
+        return $this->services['prestashop.core.localization.cldr.cache.adapter'] = new \Symfony\Component\Cache\Adapter\FilesystemAdapter('CLDR', 0, '/opt/lampp/htdocs/sparkload/var/cache/dev//localization');
     }
 
     /**
@@ -609,7 +609,7 @@ class FrontContainer extends \PrestaShop\PrestaShop\Adapter\Container\LegacyCont
      */
     protected function getPrestashop_Core_Localization_Cldr_Datalayer_LocaleCacheService()
     {
-        $this->services['prestashop.core.localization.cldr.datalayer.locale_cache'] = $instance = new \PrestaShop\PrestaShop\Core\Localization\CLDR\DataLayer\LocaleCache(($this->services['prestashop.core.localization.cldr.cache.adapter'] ?? ($this->services['prestashop.core.localization.cldr.cache.adapter'] = new \Symfony\Component\Cache\Adapter\FilesystemAdapter('CLDR', 0, 'C:\\xampp\\htdocs\\sparkload/var/cache/dev\\/localization'))));
+        $this->services['prestashop.core.localization.cldr.datalayer.locale_cache'] = $instance = new \PrestaShop\PrestaShop\Core\Localization\CLDR\DataLayer\LocaleCache(($this->services['prestashop.core.localization.cldr.cache.adapter'] ?? ($this->services['prestashop.core.localization.cldr.cache.adapter'] = new \Symfony\Component\Cache\Adapter\FilesystemAdapter('CLDR', 0, '/opt/lampp/htdocs/sparkload/var/cache/dev//localization'))));
 
         $instance->setLowerLayer(($this->services['prestashop.core.localization.cldr.datalayer.locale_reference'] ?? $this->getPrestashop_Core_Localization_Cldr_Datalayer_LocaleReferenceService()));
 
@@ -765,7 +765,7 @@ class FrontContainer extends \PrestaShop\PrestaShop\Adapter\Container\LegacyCont
      */
     protected function getPrestashop_Translation_TranslatorLanguageLoaderService()
     {
-        return $this->services['prestashop.translation.translator_language_loader'] = new \PrestaShopBundle\Translation\TranslatorLanguageLoader(($this->services['prestashop.adapter.module.repository.module_repository'] ?? ($this->services['prestashop.adapter.module.repository.module_repository'] = new \PrestaShop\PrestaShop\Adapter\Module\Repository\ModuleRepository('C:\\xampp\\htdocs\\sparkload', 'C:\\xampp\\htdocs\\sparkload/modules/'))));
+        return $this->services['prestashop.translation.translator_language_loader'] = new \PrestaShopBundle\Translation\TranslatorLanguageLoader(($this->services['prestashop.adapter.module.repository.module_repository'] ?? ($this->services['prestashop.adapter.module.repository.module_repository'] = new \PrestaShop\PrestaShop\Adapter\Module\Repository\ModuleRepository('/opt/lampp/htdocs/sparkload', '/opt/lampp/htdocs/sparkload/modules/'))));
     }
 
     /**
@@ -890,12 +890,12 @@ class FrontContainer extends \PrestaShop\PrestaShop\Adapter\Container\LegacyCont
             'kernel.bundles' => [
 
             ],
-            'kernel.root_dir' => 'C:\\xampp\\htdocs\\sparkload/app',
-            'kernel.project_dir' => 'C:\\xampp\\htdocs\\sparkload',
+            'kernel.root_dir' => '/opt/lampp/htdocs/sparkload/app',
+            'kernel.project_dir' => '/opt/lampp/htdocs/sparkload',
             'kernel.name' => 'app',
             'kernel.debug' => true,
             'kernel.environment' => 'dev',
-            'kernel.cache_dir' => 'C:\\xampp\\htdocs\\sparkload/var/cache/dev\\',
+            'kernel.cache_dir' => '/opt/lampp/htdocs/sparkload/var/cache/dev/',
             'kernel.active_modules' => [
                 0 => 'ps_linklist',
                 1 => 'blockreassurance',
@@ -965,7 +965,7 @@ class FrontContainer extends \PrestaShop\PrestaShop\Adapter\Container\LegacyCont
                 65 => 'autoupgrade',
                 66 => 'smartsupp',
             ],
-            'ps_cache_dir' => 'C:\\xampp\\htdocs\\sparkload/var/cache/dev\\',
+            'ps_cache_dir' => '/opt/lampp/htdocs/sparkload/var/cache/dev/',
             'mail_themes_uri' => '/mails/themes',
             'doctrine.dbal.logger.chain.class' => 'Doctrine\\DBAL\\Logging\\LoggerChain',
             'doctrine.dbal.logger.profiling.class' => 'Doctrine\\DBAL\\Logging\\DebugStack',
@@ -1035,7 +1035,7 @@ class FrontContainer extends \PrestaShop\PrestaShop\Adapter\Container\LegacyCont
             'doctrine.orm.second_level_cache.cache_configuration.class' => 'Doctrine\\ORM\\Cache\\CacheConfiguration',
             'doctrine.orm.second_level_cache.regions_configuration.class' => 'Doctrine\\ORM\\Cache\\RegionsConfiguration',
             'doctrine.orm.auto_generate_proxy_classes' => true,
-            'doctrine.orm.proxy_dir' => 'C:\\xampp\\htdocs\\sparkload/var/cache/dev\\/doctrine/orm/Proxies',
+            'doctrine.orm.proxy_dir' => '/opt/lampp/htdocs/sparkload/var/cache/dev//doctrine/orm/Proxies',
             'doctrine.orm.proxy_namespace' => 'Proxies',
         ];
     }

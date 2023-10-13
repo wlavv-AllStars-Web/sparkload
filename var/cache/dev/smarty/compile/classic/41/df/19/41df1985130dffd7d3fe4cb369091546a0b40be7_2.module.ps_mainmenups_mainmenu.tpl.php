@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.1, created on 2023-10-06 17:14:24
+/* Smarty version 4.3.1, created on 2023-10-10 12:23:29
   from 'module:ps_mainmenups_mainmenu.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.1',
-  'unifunc' => 'content_65203260f05ff0_09356922',
+  'unifunc' => 'content_65253431d86021_22432252',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '41df1985130dffd7d3fe4cb369091546a0b40be7' => 
     array (
       0 => 'module:ps_mainmenups_mainmenu.tpl',
-      1 => 1696581828,
+      1 => 1696927946,
       2 => 'module',
     ),
   ),
@@ -20,16 +20,16 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_65203260f05ff0_09356922 (Smarty_Internal_Template $_smarty_tpl) {
+function content_65253431d86021_22432252 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->smarty->ext->_tplFunction->registerTplFunctions($_smarty_tpl, array (
   'menu' => 
   array (
-    'compiled_filepath' => 'C:\\xampp\\htdocs\\sparkload\\var\\cache\\dev\\smarty\\compile\\classic\\41\\df\\19\\41df1985130dffd7d3fe4cb369091546a0b40be7_2.module.ps_mainmenups_mainmenu.tpl.php',
+    'compiled_filepath' => '/opt/lampp/htdocs/sparkload/var/cache/dev/smarty/compile/classic/41/df/19/41df1985130dffd7d3fe4cb369091546a0b40be7_2.module.ps_mainmenups_mainmenu.tpl.php',
     'uid' => '41df1985130dffd7d3fe4cb369091546a0b40be7',
-    'call_name' => 'smarty_template_function_menu_8873767165203260efe657_81035822',
+    'call_name' => 'smarty_template_function_menu_124758534365253431d81955_77744701',
   ),
 ));
-?><!-- begin C:\xampp\htdocs\sparkload/themes/classic/modules/ps_mainmenu/ps_mainmenu.tpl -->
+?><!-- begin /opt/lampp/htdocs/sparkload/themes/classic/modules/ps_mainmenu/ps_mainmenu.tpl -->
 <?php $_smarty_tpl->_assignInScope('_counter', 0);?>
 
 
@@ -38,15 +38,15 @@ $_smarty_tpl->smarty->ext->_tplFunction->registerTplFunctions($_smarty_tpl, arra
 
     <div class="clearfix"></div>
 </div>
-<!-- end C:\xampp\htdocs\sparkload/themes/classic/modules/ps_mainmenu/ps_mainmenu.tpl --><?php }
-/* smarty_template_function_menu_8873767165203260efe657_81035822 */
-if (!function_exists('smarty_template_function_menu_8873767165203260efe657_81035822')) {
-function smarty_template_function_menu_8873767165203260efe657_81035822(Smarty_Internal_Template $_smarty_tpl,$params) {
+<!-- end /opt/lampp/htdocs/sparkload/themes/classic/modules/ps_mainmenu/ps_mainmenu.tpl --><?php }
+/* smarty_template_function_menu_124758534365253431d81955_77744701 */
+if (!function_exists('smarty_template_function_menu_124758534365253431d81955_77744701')) {
+function smarty_template_function_menu_124758534365253431d81955_77744701(Smarty_Internal_Template $_smarty_tpl,$params) {
 $params = array_merge(array('nodes'=>array(),'depth'=>0,'parent'=>null), $params);
 foreach ($params as $key => $value) {
 $_smarty_tpl->tpl_vars[$key] = new Smarty_Variable($value, $_smarty_tpl->isRenderingCache);
 }
-$_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\xampp\\htdocs\\sparkload\\vendor\\smarty\\smarty\\libs\\plugins\\modifier.count.php','function'=>'smarty_modifier_count',),));
+$_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/opt/lampp/htdocs/sparkload/vendor/smarty/smarty/libs/plugins/modifier.count.php','function'=>'smarty_modifier_count',),));
 ?>
 
     <?php if (smarty_modifier_count($_smarty_tpl->tpl_vars['nodes']->value)) {?>
@@ -97,5 +97,5 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
       </ul>
     <?php }
 }}
-/*/ smarty_template_function_menu_8873767165203260efe657_81035822 */
+/*/ smarty_template_function_menu_124758534365253431d81955_77744701 */
 }

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.1, created on 2023-10-06 17:14:25
+/* Smarty version 4.3.1, created on 2023-10-10 12:23:29
   from 'module:ps_linklistviewstemplateshooklinkblock.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.1',
-  'unifunc' => 'content_65203261327731_08816495',
+  'unifunc' => 'content_65253431da83e8_37920336',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '906548e89c8c6025457ddaeffb1980a0c743b872' => 
     array (
       0 => 'module:ps_linklistviewstemplateshooklinkblock.tpl',
-      1 => 1695984088,
+      1 => 1696927946,
       2 => 'module',
     ),
   ),
@@ -20,8 +20,8 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_65203261327731_08816495 (Smarty_Internal_Template $_smarty_tpl) {
-?><!-- begin C:\xampp\htdocs\sparkload/themes/classic/modules/ps_linklist/views/templates/hook/linkblock.tpl --><div class="col-md-6 links">
+function content_65253431da83e8_37920336 (Smarty_Internal_Template $_smarty_tpl) {
+?><!-- begin /opt/lampp/htdocs/sparkload/themes/classic/modules/ps_linklist/views/templates/hook/linkblock.tpl --><div class="col-md-6 links">
   <div class="row">
   <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['linkBlocks']->value, 'linkBlock');
@@ -79,5 +79,5 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
   </div>
 </div>
-<!-- end C:\xampp\htdocs\sparkload/themes/classic/modules/ps_linklist/views/templates/hook/linkblock.tpl --><?php }
+<!-- end /opt/lampp/htdocs/sparkload/themes/classic/modules/ps_linklist/views/templates/hook/linkblock.tpl --><?php }
 }
