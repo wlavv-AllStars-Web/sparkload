@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.3.1, created on 2023-10-13 10:14:31
+/* Smarty version 4.3.1, created on 2023-10-17 15:25:54
   from '/opt/lampp/htdocs/sparkload/themes/classic/templates/_partials/microdata/head-jsonld.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.1',
-  'unifunc' => 'content_65290a776b6cd7_61790641',
+  'unifunc' => 'content_652e99723f28c7_74769701',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_65290a776b6cd7_61790641 (Smarty_Internal_Template $_smarty_tpl) {
+function content_652e99723f28c7_74769701 (Smarty_Internal_Template $_smarty_tpl) {
 echo '<script'; ?>
  type="application/ld+json">
   {

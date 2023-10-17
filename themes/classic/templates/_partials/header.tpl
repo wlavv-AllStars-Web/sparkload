@@ -107,11 +107,39 @@
 }
 </style>
 {/if}
+{if $page.meta.title == 'FAQ - Eculimit'}
+	</div>
+<div style="padding-top:107px;">
+<div class="back-chiptuning" align="center">
+<h1 class="heading-title" style="padding-top: 76px;font-size: 33px;">FAQ</h1>
+</div>
+</div>
+    <div class="bnr-red" style="top:0px!important;">
+		<span style="font-weight: bold;">{l s='Register now' d='Shop.Theme.Global'}</span>
+		{l s='and get' d='Shop.Theme.Global'}
+		<span style="font-weight: bold;">{l s='0.1 free credits' d='Shop.Theme.Global'}</span>
+	  </div>
+  {/if}  
+{if $page.meta.title == 'Chiptuning Tools - Eculimit'}
+	</div>
+<div style="padding-top:107px;">
+<div class="back-chiptuning" align="center">
+<h1 class="heading-title" style="padding-top: 42px; font-size: 33px; line-height: 44px;">PROFESSIONAL GRADE TOOLS
+<br>FOR PROFESSIONAL RESULTS
+</h1>
+</div>
+</div>
+    <div class="bnr-red" style="top:0px!important;">
+		<span style="font-weight: bold;">{l s='Register now' d='Shop.Theme.Global'}</span>
+		{l s='and get' d='Shop.Theme.Global'}
+		<span style="font-weight: bold;">{l s='0.1 free credits' d='Shop.Theme.Global'}</span>
+	  </div>
+  {/if}  
 {if $page.meta.title == 'Chiptuning File - Eculimit'}
 	</div>
 <div style="padding-top:107px;">
 <div class="back-chiptuning" align="center">
-<h1 class="heading-title" style="padding-top: 69px;font-size: 27px;">Eculimit can bring you the best chiptuning files with premium quality under safe margins </h1>
+<h2 class="heading-title" style="padding-top: 69px;font-size: 27px;">Eculimit can bring you the best chiptuning files with premium quality under safe margins </h2>
 <p style="color:#fff">We also develop chiptuining additional options for our customers. Attached you can see some of the different tuning options that we offer.</p>
 </div>
 </div>
@@ -165,7 +193,6 @@
 		{l s='and get' d='Shop.Theme.Global'}
 		<span style="font-weight: bold;">{l s='0.1 free credits' d='Shop.Theme.Global'}</span>
 	</div>
-
 {/if}
 {if $page.page_name == 'index'}
   </div>
@@ -181,8 +208,12 @@
 <h1 class="heading-title" align="center">Register Now</h1>
 <h3 class="heading-title-sub"  align="center">and start chiptuning</h3>
 <div style="display: flex;justify-content: center;width: 100%;padding: 12px;gap: 54px;" align="center">
+<a href="/login"> 
 <div class="spa-btn-red">LOG IN</div>
+</a>
+<a href="/registration"> 
 <div class="spa-btn-trans">REGISTER</div>
+</a>
 </div>
 </div>
 </div>
@@ -219,11 +250,139 @@
 </div>
 </div>
 {/if}
-{if $page.meta.title == 'About us - Limit'}
+{if $page.meta.title == 'About us - Eculimit'}
 	</div>
 <div style="padding-top:107px;">
 <div class="back-about" align="center">
 <h1 class="heading-title" style="padding-top: 69px;">About Us</h1>
+</div>
+</div>
+    <div class="bnr-red" style="top:0px!important;">
+		<span style="font-weight: bold;">{l s='Register now' d='Shop.Theme.Global'}</span>
+		{l s='and get' d='Shop.Theme.Global'}
+		<span style="font-weight: bold;">{l s='0.1 free credits' d='Shop.Theme.Global'}</span>
+	</div>
+{/if}
+{if $page.meta.title == 'Prices - Eculimit'}
+	</div>
+<style>
+ /* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 74px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ed1921;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #ed1921;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #ed1921;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(38px);
+  -ms-transform: translateX(38px);
+  transform: translateX(38px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  width: 74px;
+  border-radius: 34px;
+}
+.slider.round:before {
+  border-radius: 50%;
+} 
+.tgsw {
+  font-size: 18px;
+  font-weight: bold;
+  color: #939393;
+}
+.tgsw-b {
+  font-size: 18px;
+  font-weight: bold;
+  color: #000;
+}
+.price-card {
+box-shadow: 0 6px 14px rgba(0, 0, 0, .4);
+background-color: rgb(245, 245, 245);
+height: 126px;
+}
+.price-card p:first-child {
+  font-family: "Roboto", Arial, sans-serif;
+  text-transform: uppercase;
+  font-size: 15px;
+  font-weight: 900 !important;
+  background-color: #ff001a;
+  color: white;
+  margin-top: 0;
+  padding: 15px 0px;
+  width: 121px;
+}
+.cdd{
+  background-color: #ed1021;
+  color: #fff;
+  font-weight: 900;
+  padding: 13px;
+  font-size: 17px;
+}
+
+ .ula{
+  text-align: left;
+  padding-left: 45px;
+  padding-top: 17px;
+  line-height: normal;
+  font-size: 16px;
+  padding-bottom: 22px;
+  list-style: disc;
+  background-color: #f7f8fa;
+  color: #606060;
+  font-weight: 500;
+  height:100%;
+  padding-right: 22px;
+}
+#footer {
+  padding-top: 0rem;
+}
+</style>
+<div style="padding-top:107px;">
+<div class="back-chiptuning" align="center">
+<h1 class="heading-title" style="padding-top: 79px;">Prices</h1>
 </div>
 </div>
     <div class="bnr-red" style="top:0px!important;">

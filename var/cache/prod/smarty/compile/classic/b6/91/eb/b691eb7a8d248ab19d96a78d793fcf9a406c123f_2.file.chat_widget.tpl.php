@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.3.1, created on 2023-10-13 10:14:31
+/* Smarty version 4.3.1, created on 2023-10-17 15:25:54
   from '/opt/lampp/htdocs/sparkload/modules/smartsupp/views/templates/front/chat_widget.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.1',
-  'unifunc' => 'content_65290a7768cb77_18343526',
+  'unifunc' => 'content_652e99723c95a0_46627553',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_65290a7768cb77_18343526 (Smarty_Internal_Template $_smarty_tpl) {
+function content_652e99723c95a0_46627553 (Smarty_Internal_Template $_smarty_tpl) {
 echo '<?php'; ?>
 
 /**

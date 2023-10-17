@@ -22,6 +22,36 @@
  * @copyright Since 2007 PrestaShop SA and Contributors
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  *}
+{if $page.meta.title == 'FAQ - Eculimit'}
+  <script>
+ var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    var icon = this.querySelector("i");
+
+    if (this.classList.contains("active")) {
+      icon.classList.remove("fa-plus");
+      icon.classList.add("fa-minus");
+    } else {
+      icon.classList.remove("fa-minus");
+      icon.classList.add("fa-plus");
+    }
+
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+
+  </script>
+{/if}
+
 <div class="container">
   <div class="row">
     {block name='hook_footer_before'}

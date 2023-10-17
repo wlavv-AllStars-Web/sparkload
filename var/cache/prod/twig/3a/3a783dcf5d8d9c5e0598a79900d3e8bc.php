@@ -94,7 +94,7 @@ class __TwigTemplate_19f773e9a7337752b0238505d261b218 extends Template
         $macros = $this->macros;
         // line 51
         echo "    ";
-        $this->loadTemplate("@PrestaShop/Admin/Improve/Design/Cms/index.html.twig", "@PrestaShop/Admin/Improve/Design/Cms/index.html.twig", 51, "2136506076")->display(twig_array_merge($context, ["grid" => ($context["cmsCategoryGrid"] ?? null)]));
+        $this->loadTemplate("@PrestaShop/Admin/Improve/Design/Cms/index.html.twig", "@PrestaShop/Admin/Improve/Design/Cms/index.html.twig", 51, "311706429")->display(twig_array_merge($context, ["grid" => ($context["cmsCategoryGrid"] ?? null)]));
         // line 58
         echo "  ";
     }
@@ -152,7 +152,7 @@ class __TwigTemplate_19f773e9a7337752b0238505d261b218 extends Template
 
 
 /* @PrestaShop/Admin/Improve/Design/Cms/index.html.twig */
-class __TwigTemplate_19f773e9a7337752b0238505d261b218___2136506076 extends Template
+class __TwigTemplate_19f773e9a7337752b0238505d261b218___311706429 extends Template
 {
     private $source;
     private $macros = [];

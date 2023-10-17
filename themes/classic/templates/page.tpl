@@ -72,7 +72,9 @@
 </div>
 </div>
 <div style="width:100%;padding-bottom:4%;padding-top:2%;" align="center">
+<a href="/registration">
   <div class="spaa-btn-red">REGISTER NOW</div>
+</a>
 </div>
 <div style="display:flex;">
 <div style="width:50%;">
@@ -84,7 +86,9 @@
 </div>
 </div>
 <div style="width:100%;padding-top:2%;" align="center">
+<a href="/content/8-faq-eculimit">
   <div class="spaa-btn-red">FAQ</div>
+</a>
 </div>
 </div>
 </div>

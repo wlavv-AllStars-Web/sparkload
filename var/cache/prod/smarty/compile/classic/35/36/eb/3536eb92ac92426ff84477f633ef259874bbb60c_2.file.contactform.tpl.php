@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.1, created on 2023-10-13 10:14:30
+/* Smarty version 4.3.1, created on 2023-10-17 15:25:47
   from '/opt/lampp/htdocs/sparkload/themes/classic/modules/contactform/views/templates/widget/contactform.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.1',
-  'unifunc' => 'content_65290a7651b8a7_19712379',
+  'unifunc' => 'content_652e996bcfc361_12143011',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '3536eb92ac92426ff84477f633ef259874bbb60c' => 
     array (
       0 => '/opt/lampp/htdocs/sparkload/themes/classic/modules/contactform/views/templates/widget/contactform.tpl',
-      1 => 1697186191,
+      1 => 1697552225,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_65290a7651b8a7_19712379 (Smarty_Internal_Template $_smarty_tpl) {
+function content_652e996bcfc361_12143011 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
      <?php if ($_smarty_tpl->tpl_vars['notifications']->value) {?>
       <div class="col-xs-12 alert <?php if ($_smarty_tpl->tpl_vars['notifications']->value['nw_error']) {?>alert-danger<?php } else { ?>alert-success<?php }?>">
@@ -41,6 +41,24 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
     <?php }?>
 
     <?php if (!$_smarty_tpl->tpl_vars['notifications']->value || $_smarty_tpl->tpl_vars['notifications']->value['nw_error']) {?>
+
+<style>
+.ssc:focus {
+    outline: none !important;
+    border-bottom:2px solid red !important;
+}
+.ssc:focus::placeholder {
+  color: red;
+}
+.ss:focus {
+    outline: none !important;
+    border-bottom:2px solid red !important;
+}
+input:focus::placeholder {
+  color: red;
+}
+</style>
+
 <section class="contact-form">
   <form action="<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['urls']->value['pages']['contact'], ENT_QUOTES, 'UTF-8');?>
 " method="post" <?php if ($_smarty_tpl->tpl_vars['contact']->value['allow_file_upload']) {?>enctype="multipart/form-data"<?php }?>>
@@ -57,13 +75,13 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
       <p style="font-family: 'Roboto', Sans-serif;font-weight: 300;padding-top:7px;">Sunday: <span style="color: #ed1921;">Closed!</span></p>
       </div>
       <div style="display:flex;padding: 6px;">
-      <img decoding="async" src="https://eculimit.com/wp-content/uploads/2021/01/clock-1-150x150.png" style="width: 40px;height:auto;">															
+      <img decoding="async" src="img/cms/icos/clock-1-150x150.png" style="width: 40px;height:auto;">															
       <div style="margin-top: 11px;padding-left: 11px;font-weight: bold;color: #000;font-size: 17px;">Current time in Eculimit<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['current_time']->value, ENT_QUOTES, 'UTF-8');?>
 </div>
      </div>
-      <div style="padding-top: 12px;font-size: 33px;font-weight: bold;color: #ED1921;" align="center">10:49 am</div>
+      <div style="padding-top: 12px;font-size: 33px;font-weight: bold;color: #ED1921;" align="center" id="relogio">10:49 am</div>
       <div align="center"> 
-      <div class="spaa-btn-red" style="margin-top:33px;background-color:green;">Currently Open</div>
+      <div class="" id="open">Currently Open</div>
       </div>
     </div> 
       <section class="form-fields">
@@ -119,6 +137,64 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
             display: none !important;
           }
         </style>
+          <?php echo '<script'; ?>
+ type="text/javascript">
+function updateClock() {
+    const currentDate = new Date();
+    const options = { timeZone: 'Europe/Madrid', hour12: true, hour: 'numeric', minute: '2-digit' };
+    const formattedTime = currentDate.toLocaleString('es-ES', options).replace(/\./g, '').toLowerCase();
+    document.getElementById('relogio').textContent = formattedTime;
+}
+
+// Update the clock every second
+setInterval(updateClock, 1000);
+// Initial update
+updateClock();
+
+  
+    function checkStoreStatus() {
+        const today = new Date().toLocaleString('en-US', { timeZone: 'Europe/Madrid', weekday: 'long' });
+        const currentDate = new Date();
+        const currentTime = `${currentDate.getHours()}:${currentDate.getMinutes()}`;
+        const openElement = document.getElementById('open');
+        if (today === 'Saturday') {
+            if (compareTime(currentTime, '09:00', '14:00')) {
+                openElement.classList.remove('btn-h-r');
+                openElement.classList.add('btn-h-g');
+            } else {
+                openElement.classList.remove('btn-h-g');
+                openElement.classList.add('btn-h-r');
+            }
+        } else if (today === 'Sunday') {
+            openElement.classList.remove('btn-h-g');
+            openElement.classList.add('btn-h-r');
+        } else {
+            if (compareTime(currentTime, '09:00', '19:00')) {
+                openElement.classList.remove('btn-h-r');
+                openElement.classList.add('btn-h-g');
+            } else {
+                openElement.classList.remove('btn-h-g');
+                openElement.classList.add('btn-h-r');
+            }
+        }
+    }
+
+    function compareTime(current, start, end) {
+        const currentTime = new Date('2000-01-01 ' + current);
+        const startTime = new Date('2000-01-01 ' + start);
+        const endTime = new Date('2000-01-01 ' + end);
+        return currentTime >= startTime && currentTime <= endTime;
+    }
+
+    // Verificar o estado da loja a cada minuto
+    setInterval(checkStoreStatus, 60000);
+    // Verificação inicial
+    checkStoreStatus();
+  
+<?php echo '</script'; ?>
+>
+
+
         <input type="text" name="url" value=""/>
         <input type="hidden" name="token" value="<?php echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['token']->value, ENT_QUOTES, 'UTF-8');?>
 " />
@@ -201,6 +277,7 @@ echo htmlspecialchars((string) $_smarty_tpl->tpl_vars['contact']->value['message
     <?php }?>
 
   </form>
+
 </section>
 <?php }
 }

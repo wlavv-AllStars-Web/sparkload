@@ -31,8 +31,10 @@ window.addEventListener('DOMContentLoaded', function () {
     var aboutElement = document.getElementById('about');
     }
   if (window.location.pathname === '/contact-us') {
-    // Se o URL corresponder, obtenha o elemento com o ID "contacte"
     var aboutElement = document.getElementById('contacte');
+}
+  if (window.location.pathname === '/content/8-faq-eculimit') {
+    var aboutElement = document.getElementById('faqq');
 }
     // Verifique se o elemento existe
     if (aboutElement) {
@@ -58,12 +60,11 @@ window.addEventListener('DOMContentLoaded', function () {
       }
     {else}
       <a href="{$urls.pages.contact}" class="mst">{l s='NEWS' d='Shop.Theme.Global'}</a>
-      <a href="{$urls.pages.contact}" class="mst">{l s='FAQ' d='Shop.Theme.Global'}</a>
+      <a href="/content/8-faq-eculimit" class="mst" id="faqq">{l s='FAQ' d='Shop.Theme.Global'}</a>
       <a href="/content/4-about-us" class="mst" id="about" style="width: 78px;">{l s='ABOUT US' d='Shop.Theme.Global'}</a>
       <a href="{$urls.pages.contact}"  class="mst"  id="contacte" >{l s='CONTACT' d='Shop.Theme.Global'}</a>
       <a href="{$urls.pages.contact}" class="btnr"><i class="fas fa-key"></i>{l s='REGISTER' d='Shop.Theme.Global'}</a>
       <a href="{$urls.pages.contact}" class="btnr" style="width: 99px;margin-left: -33px;"><i class="fas fa-user-alt"></i>{l s='LOG IN' d='Shop.Theme.Global'}</a>
-  
     {/if}
   </div>
 </div>

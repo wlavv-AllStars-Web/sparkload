@@ -34,6 +34,24 @@
     {/if}
 
     {if !$notifications || $notifications.nw_error}
+
+<style>
+.ssc:focus {
+    outline: none !important;
+    border-bottom:2px solid red !important;
+}
+.ssc:focus::placeholder {
+  color: red;
+}
+.ss:focus {
+    outline: none !important;
+    border-bottom:2px solid red !important;
+}
+input:focus::placeholder {
+  color: red;
+}
+</style>
+
 <section class="contact-form">
   <form action="{$urls.pages.contact}" method="post" {if $contact.allow_file_upload}enctype="multipart/form-data"{/if}>
 
@@ -49,12 +67,12 @@
       <p style="font-family: 'Roboto', Sans-serif;font-weight: 300;padding-top:7px;">Sunday: <span style="color: #ed1921;">Closed!</span></p>
       </div>
       <div style="display:flex;padding: 6px;">
-      <img decoding="async" src="https://eculimit.com/wp-content/uploads/2021/01/clock-1-150x150.png" style="width: 40px;height:auto;">															
+      <img decoding="async" src="img/cms/icos/clock-1-150x150.png" style="width: 40px;height:auto;">															
       <div style="margin-top: 11px;padding-left: 11px;font-weight: bold;color: #000;font-size: 17px;">Current time in Eculimit{$current_time}</div>
      </div>
-      <div style="padding-top: 12px;font-size: 33px;font-weight: bold;color: #ED1921;" align="center">10:49 am</div>
+      <div style="padding-top: 12px;font-size: 33px;font-weight: bold;color: #ED1921;" align="center" id="relogio">10:49 am</div>
       <div align="center"> 
-      <div class="spaa-btn-red" style="margin-top:33px;background-color:green;">Currently Open</div>
+      <div class="" id="open">Currently Open</div>
       </div>
     </div> 
       <section class="form-fields">
@@ -97,6 +115,62 @@
             display: none !important;
           }
         </style>
+          <script type="text/javascript">
+function updateClock() {
+    const currentDate = new Date();
+    const options = { timeZone: 'Europe/Madrid', hour12: true, hour: 'numeric', minute: '2-digit' };
+    const formattedTime = currentDate.toLocaleString('es-ES', options).replace(/\./g, '').toLowerCase();
+    document.getElementById('relogio').textContent = formattedTime;
+}
+
+// Update the clock every second
+setInterval(updateClock, 1000);
+// Initial update
+updateClock();
+
+  {literal}
+    function checkStoreStatus() {
+        const today = new Date().toLocaleString('en-US', { timeZone: 'Europe/Madrid', weekday: 'long' });
+        const currentDate = new Date();
+        const currentTime = `${currentDate.getHours()}:${currentDate.getMinutes()}`;
+        const openElement = document.getElementById('open');
+        if (today === 'Saturday') {
+            if (compareTime(currentTime, '09:00', '14:00')) {
+                openElement.classList.remove('btn-h-r');
+                openElement.classList.add('btn-h-g');
+            } else {
+                openElement.classList.remove('btn-h-g');
+                openElement.classList.add('btn-h-r');
+            }
+        } else if (today === 'Sunday') {
+            openElement.classList.remove('btn-h-g');
+            openElement.classList.add('btn-h-r');
+        } else {
+            if (compareTime(currentTime, '09:00', '19:00')) {
+                openElement.classList.remove('btn-h-r');
+                openElement.classList.add('btn-h-g');
+            } else {
+                openElement.classList.remove('btn-h-g');
+                openElement.classList.add('btn-h-r');
+            }
+        }
+    }
+
+    function compareTime(current, start, end) {
+        const currentTime = new Date('2000-01-01 ' + current);
+        const startTime = new Date('2000-01-01 ' + start);
+        const endTime = new Date('2000-01-01 ' + end);
+        return currentTime >= startTime && currentTime <= endTime;
+    }
+
+    // Verificar o estado da loja a cada minuto
+    setInterval(checkStoreStatus, 60000);
+    // Verificação inicial
+    checkStoreStatus();
+  {/literal}
+</script>
+
+
         <input type="text" name="url" value=""/>
         <input type="hidden" name="token" value="{$token}" />
         <input class="spaa-btn-red" style="float:left;border: 0px;margin-top: 22px; margin-left: 15px;text-transform:uppercase;" type="submit" name="submitMessage" value="{l s='Send Message' d='Shop.Theme.Actions'}">
@@ -157,4 +231,5 @@
     {/if}
 
   </form>
+
 </section>

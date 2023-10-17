@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.1, created on 2023-10-13 10:14:31
+/* Smarty version 4.3.1, created on 2023-10-17 15:25:54
   from '/opt/lampp/htdocs/sparkload/themes/classic/templates/_partials/header.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.1',
-  'unifunc' => 'content_65290a776cc8a9_69013041',
+  'unifunc' => 'content_652e997240e2e2_39262392',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '7cae00a5441df3a3e5873b0e834ec67f9a52254e' => 
     array (
       0 => '/opt/lampp/htdocs/sparkload/themes/classic/templates/_partials/header.tpl',
-      1 => 1697186611,
+      1 => 1697541567,
       2 => 'file',
     ),
   ),
@@ -20,23 +20,23 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_65290a776cc8a9_69013041 (Smarty_Internal_Template $_smarty_tpl) {
+function content_652e997240e2e2_39262392 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, false);
 ?>
 <div style="position: fixed;width: 100%;z-index: 9999;">
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_34806368265290a776c7c58_37658322', 'header_banner');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_970868604652e9972405514_02623383', 'header_banner');
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_34995587665290a776c8198_74164398', 'header_nav');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_452486058652e9972405c43_49060807', 'header_nav');
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_86757447265290a776c8777_15247357', 'header_top');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1342740372652e9972406395_72823031', 'header_top');
 ?>
 
 <?php if ($_smarty_tpl->tpl_vars['page']->value['meta']['title'] == 'Contact us') {?>
@@ -63,11 +63,45 @@ $_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_86757447265290a776
 }
 </style>
 <?php }
-if ($_smarty_tpl->tpl_vars['page']->value['meta']['title'] == 'Chiptuning File - Eculimit') {?>
+if ($_smarty_tpl->tpl_vars['page']->value['meta']['title'] == 'FAQ - Eculimit') {?>
 	</div>
 <div style="padding-top:107px;">
 <div class="back-chiptuning" align="center">
-<h1 class="heading-title" style="padding-top: 69px;font-size: 27px;">Eculimit can bring you the best chiptuning files with premium quality under safe margins </h1>
+<h1 class="heading-title" style="padding-top: 76px;font-size: 33px;">FAQ</h1>
+</div>
+</div>
+    <div class="bnr-red" style="top:0px!important;">
+		<span style="font-weight: bold;"><?php echo call_user_func_array( $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['l'][0], array( array('s'=>'Register now','d'=>'Shop.Theme.Global'),$_smarty_tpl ) );?>
+</span>
+		<?php echo call_user_func_array( $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['l'][0], array( array('s'=>'and get','d'=>'Shop.Theme.Global'),$_smarty_tpl ) );?>
+
+		<span style="font-weight: bold;"><?php echo call_user_func_array( $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['l'][0], array( array('s'=>'0.1 free credits','d'=>'Shop.Theme.Global'),$_smarty_tpl ) );?>
+</span>
+	  </div>
+  <?php }?>  
+<?php if ($_smarty_tpl->tpl_vars['page']->value['meta']['title'] == 'Chiptuning Tools - Eculimit') {?>
+	</div>
+<div style="padding-top:107px;">
+<div class="back-chiptuning" align="center">
+<h1 class="heading-title" style="padding-top: 42px; font-size: 33px; line-height: 44px;">PROFESSIONAL GRADE TOOLS
+<br>FOR PROFESSIONAL RESULTS
+</h1>
+</div>
+</div>
+    <div class="bnr-red" style="top:0px!important;">
+		<span style="font-weight: bold;"><?php echo call_user_func_array( $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['l'][0], array( array('s'=>'Register now','d'=>'Shop.Theme.Global'),$_smarty_tpl ) );?>
+</span>
+		<?php echo call_user_func_array( $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['l'][0], array( array('s'=>'and get','d'=>'Shop.Theme.Global'),$_smarty_tpl ) );?>
+
+		<span style="font-weight: bold;"><?php echo call_user_func_array( $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['l'][0], array( array('s'=>'0.1 free credits','d'=>'Shop.Theme.Global'),$_smarty_tpl ) );?>
+</span>
+	  </div>
+  <?php }?>  
+<?php if ($_smarty_tpl->tpl_vars['page']->value['meta']['title'] == 'Chiptuning File - Eculimit') {?>
+	</div>
+<div style="padding-top:107px;">
+<div class="back-chiptuning" align="center">
+<h2 class="heading-title" style="padding-top: 69px;font-size: 27px;">Eculimit can bring you the best chiptuning files with premium quality under safe margins </h2>
 <p style="color:#fff">We also develop chiptuining additional options for our customers. Attached you can see some of the different tuning options that we offer.</p>
 </div>
 </div>
@@ -127,7 +161,6 @@ if ($_smarty_tpl->tpl_vars['page']->value['meta']['title'] == 'iFrame - Eculimit
 		<span style="font-weight: bold;"><?php echo call_user_func_array( $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['l'][0], array( array('s'=>'0.1 free credits','d'=>'Shop.Theme.Global'),$_smarty_tpl ) );?>
 </span>
 	</div>
-
 <?php }
 if ($_smarty_tpl->tpl_vars['page']->value['page_name'] == 'index') {?>
   </div>
@@ -146,8 +179,12 @@ if ($_smarty_tpl->tpl_vars['page']->value['page_name'] == 'index') {?>
 <h1 class="heading-title" align="center">Register Now</h1>
 <h3 class="heading-title-sub"  align="center">and start chiptuning</h3>
 <div style="display: flex;justify-content: center;width: 100%;padding: 12px;gap: 54px;" align="center">
+<a href="/login"> 
 <div class="spa-btn-red">LOG IN</div>
+</a>
+<a href="/registration"> 
 <div class="spa-btn-trans">REGISTER</div>
+</a>
 </div>
 </div>
 </div>
@@ -184,7 +221,7 @@ if ($_smarty_tpl->tpl_vars['page']->value['page_name'] == 'index') {?>
 </div>
 </div>
 <?php }
-if ($_smarty_tpl->tpl_vars['page']->value['meta']['title'] == 'About us - Limit') {?>
+if ($_smarty_tpl->tpl_vars['page']->value['meta']['title'] == 'About us - Eculimit') {?>
 	</div>
 <div style="padding-top:107px;">
 <div class="back-about" align="center">
@@ -199,16 +236,147 @@ if ($_smarty_tpl->tpl_vars['page']->value['meta']['title'] == 'About us - Limit'
 		<span style="font-weight: bold;"><?php echo call_user_func_array( $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['l'][0], array( array('s'=>'0.1 free credits','d'=>'Shop.Theme.Global'),$_smarty_tpl ) );?>
 </span>
 	</div>
+<?php }
+if ($_smarty_tpl->tpl_vars['page']->value['meta']['title'] == 'Prices - Eculimit') {?>
+	</div>
+<style>
+ /* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 74px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ed1921;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #ed1921;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #ed1921;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(38px);
+  -ms-transform: translateX(38px);
+  transform: translateX(38px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  width: 74px;
+  border-radius: 34px;
+}
+.slider.round:before {
+  border-radius: 50%;
+} 
+.tgsw {
+  font-size: 18px;
+  font-weight: bold;
+  color: #939393;
+}
+.tgsw-b {
+  font-size: 18px;
+  font-weight: bold;
+  color: #000;
+}
+.price-card {
+box-shadow: 0 6px 14px rgba(0, 0, 0, .4);
+background-color: rgb(245, 245, 245);
+height: 126px;
+}
+.price-card p:first-child {
+  font-family: "Roboto", Arial, sans-serif;
+  text-transform: uppercase;
+  font-size: 15px;
+  font-weight: 900 !important;
+  background-color: #ff001a;
+  color: white;
+  margin-top: 0;
+  padding: 15px 0px;
+  width: 121px;
+}
+.cdd{
+  background-color: #ed1021;
+  color: #fff;
+  font-weight: 900;
+  padding: 13px;
+  font-size: 17px;
+}
+
+ .ula{
+  text-align: left;
+  padding-left: 45px;
+  padding-top: 17px;
+  line-height: normal;
+  font-size: 16px;
+  padding-bottom: 22px;
+  list-style: disc;
+  background-color: #f7f8fa;
+  color: #606060;
+  font-weight: 500;
+  height:100%;
+  padding-right: 22px;
+}
+#footer {
+  padding-top: 0rem;
+}
+</style>
+<div style="padding-top:107px;">
+<div class="back-chiptuning" align="center">
+<h1 class="heading-title" style="padding-top: 79px;">Prices</h1>
+</div>
+</div>
+    <div class="bnr-red" style="top:0px!important;">
+		<span style="font-weight: bold;"><?php echo call_user_func_array( $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['l'][0], array( array('s'=>'Register now','d'=>'Shop.Theme.Global'),$_smarty_tpl ) );?>
+</span>
+		<?php echo call_user_func_array( $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['l'][0], array( array('s'=>'and get','d'=>'Shop.Theme.Global'),$_smarty_tpl ) );?>
+
+		<span style="font-weight: bold;"><?php echo call_user_func_array( $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['l'][0], array( array('s'=>'0.1 free credits','d'=>'Shop.Theme.Global'),$_smarty_tpl ) );?>
+</span>
+	</div>
 
 <?php }
 }
 /* {block 'header_banner'} */
-class Block_34806368265290a776c7c58_37658322 extends Smarty_Internal_Block
+class Block_970868604652e9972405514_02623383 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'header_banner' => 
   array (
-    0 => 'Block_34806368265290a776c7c58_37658322',
+    0 => 'Block_970868604652e9972405514_02623383',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -223,12 +391,12 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block 'header_banner'} */
 /* {block 'header_nav'} */
-class Block_34995587665290a776c8198_74164398 extends Smarty_Internal_Block
+class Block_452486058652e9972405c43_49060807 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'header_nav' => 
   array (
-    0 => 'Block_34995587665290a776c8198_74164398',
+    0 => 'Block_452486058652e9972405c43_49060807',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -264,12 +432,12 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block 'header_nav'} */
 /* {block 'header_top'} */
-class Block_86757447265290a776c8777_15247357 extends Smarty_Internal_Block
+class Block_1342740372652e9972406395_72823031 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'header_top' => 
   array (
-    0 => 'Block_86757447265290a776c8777_15247357',
+    0 => 'Block_1342740372652e9972406395_72823031',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
