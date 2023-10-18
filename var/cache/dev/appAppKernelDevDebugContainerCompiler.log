@@ -1400,6 +1400,21 @@ Symfony\Component\DependencyInjection\Compiler\ReplaceAliasByActualDefinitionPas
 Symfony\Component\DependencyInjection\Compiler\ReplaceAliasByActualDefinitionPass: Changed reference of service "web_profiler.controller.router" previously pointing to "router.default" to "router".
 Symfony\Component\DependencyInjection\Compiler\ReplaceAliasByActualDefinitionPass: Changed reference of service "debug.file_link_formatter.url_format" previously pointing to "router.default" to "router".
 Symfony\Component\DependencyInjection\Compiler\ReplaceAliasByActualDefinitionPass: Changed reference of service "web_profiler.debug_toolbar" previously pointing to "router.default" to "router".
+Symfony\Component\DependencyInjection\Compiler\ReplaceAliasByActualDefinitionPass: Changed reference of service "mbo.addons.toolbar" previously pointing to "translator.data_collector" to "translator".
+Symfony\Component\DependencyInjection\Compiler\ReplaceAliasByActualDefinitionPass: Changed reference of service "mbo.modules.repository" previously pointing to "monolog.logger" to "logger".
+Symfony\Component\DependencyInjection\Compiler\ReplaceAliasByActualDefinitionPass: Changed reference of service "mbo.modules.builder" previously pointing to "router.default" to "router".
+Symfony\Component\DependencyInjection\Compiler\ReplaceAliasByActualDefinitionPass: Changed reference of service "mbo.modules.builder" previously pointing to "monolog.logger" to "logger".
+Symfony\Component\DependencyInjection\Compiler\ReplaceAliasByActualDefinitionPass: Changed reference of service "mbo.modules.state_machine" previously pointing to "debug.event_dispatcher" to "event_dispatcher".
+Symfony\Component\DependencyInjection\Compiler\ReplaceAliasByActualDefinitionPass: Changed reference of service "mbo.modules.state_machine" previously pointing to "translator.data_collector" to "translator".
+Symfony\Component\DependencyInjection\Compiler\ReplaceAliasByActualDefinitionPass: Changed reference of service "mbo.modules.state_machine.source_retriever.url" previously pointing to "translator.data_collector" to "translator".
+Symfony\Component\DependencyInjection\Compiler\ReplaceAliasByActualDefinitionPass: Changed reference of service "mbo.modules.state_machine.transitions_manager" previously pointing to "PrestaShop\PrestaShop\Core\Module\ModuleManager" to "prestashop.module.manager".
+Symfony\Component\DependencyInjection\Compiler\ReplaceAliasByActualDefinitionPass: Changed reference of service "mbo.cdc.context_builder" previously pointing to "PrestaShop\PrestaShop\Core\Module\ModuleRepository" to "prestashop.core.admin.module.repository".
+Symfony\Component\DependencyInjection\Compiler\ReplaceAliasByActualDefinitionPass: Changed reference of service "mbo.cdc.context_builder" previously pointing to "router.default" to "router".
+Symfony\Component\DependencyInjection\Compiler\ReplaceAliasByActualDefinitionPass: Changed reference of service "mbo.addons.event_subscriber" previously pointing to "monolog.logger" to "logger".
+Symfony\Component\DependencyInjection\Compiler\ReplaceAliasByActualDefinitionPass: Changed reference of service "mbo.addons.links_provider" previously pointing to "translator.data_collector" to "translator".
+Symfony\Component\DependencyInjection\Compiler\ReplaceAliasByActualDefinitionPass: Changed reference of service "mbo.addons.links_provider" previously pointing to "router.default" to "router".
+Symfony\Component\DependencyInjection\Compiler\ReplaceAliasByActualDefinitionPass: Changed reference of service "mbo.controller.addons" previously pointing to "PrestaShop\PrestaShop\Core\Module\ModuleManager" to "prestashop.module.manager".
+Symfony\Component\DependencyInjection\Compiler\ReplaceAliasByActualDefinitionPass: Changed reference of service "mbo.controller.addons" previously pointing to "PrestaShop\PrestaShop\Core\Module\ModuleRepository" to "prestashop.core.admin.module.repository".
 Symfony\Component\DependencyInjection\Compiler\ReplaceAliasByActualDefinitionPass: Changed reference of service "prestashop.module.link_block.repository" previously pointing to "translator.data_collector" to "translator".
 Symfony\Component\DependencyInjection\Compiler\ReplaceAliasByActualDefinitionPass: Changed reference of service "prestashop.module.link_block.grid.factory" previously pointing to "translator.data_collector" to "translator".
 Symfony\Component\DependencyInjection\Compiler\ReplaceAliasByActualDefinitionPass: Changed reference of service "prestashop.module.link_block.form_type" previously pointing to "translator.data_collector" to "translator".
@@ -1615,6 +1630,7 @@ Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Remo
 Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "assets.empty_package"; reason: unused.
 Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "assets.empty_version_strategy"; reason: unused.
 Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "psr18.http_client"; reason: unused.
+Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "Http\Client\HttpClient"; reason: unused.
 Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "validator.mapping.cache.symfony"; reason: unused.
 Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "validator.mapping.cache.adapter"; reason: unused.
 Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "translator.logging"; reason: unused.
@@ -1786,6 +1802,7 @@ Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inl
 Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service ".service_locator.tqMhJS3.router.cache_warmer" to "router.cache_warmer".
 Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "annotations.dummy_registry" to "annotations.reader".
 Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "cache.property_access" to "property_accessor".
+Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "api_platform.serializer.uuid_denormalizer" to "serializer".
 Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "api_platform.openapi.normalizer.api_gateway" to "serializer".
 Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "api_platform.swagger.normalizer.api_gateway" to "serializer".
 Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "api_platform.hydra.normalizer.constraint_violation_list" to "serializer".
@@ -2044,6 +2061,7 @@ Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inl
 Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "distributionapiclient.circuit_breaker.factory" to "distributionapiclient.circuit_breaker".
 Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "distributionapiclient.circuit_breaker" to "distributionapiclient.distribution_api".
 Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "PrestaShop\Module\DistributionApiClient\ShopDataProvider" to "distributionapiclient.distribution_api".
+Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "mbo.addons.client.http" to "mbo.addons.client.api".
 Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "prestashop.module.blockwishlist.grid.all_time_statistics_data_factory" to "prestashop.module.blockwishlist.grid.all_time_stastistics_grid_factory".
 Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "prestashop.module.blockwishlist.grid.current_year_statistics_data_factory" to "prestashop.module.blockwishlist.grid.current_year_stastistics_grid_factory".
 Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "prestashop.module.blockwishlist.grid.current_month_statistics_data_factory" to "prestashop.module.blockwishlist.grid.current_month_stastistics_grid_factory".

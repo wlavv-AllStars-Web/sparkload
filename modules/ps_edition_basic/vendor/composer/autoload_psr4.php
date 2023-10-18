@@ -6,13 +6,5 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
-    'Symfony\\Polyfill\\Php80\\' => array($vendorDir . '/symfony/polyfill-php80'),
-    'Symfony\\Polyfill\\Mbstring\\' => array($vendorDir . '/symfony/polyfill-mbstring'),
-    'Symfony\\Polyfill\\Intl\\Normalizer\\' => array($vendorDir . '/symfony/polyfill-intl-normalizer'),
-    'Symfony\\Polyfill\\Intl\\Grapheme\\' => array($vendorDir . '/symfony/polyfill-intl-grapheme'),
-    'Symfony\\Polyfill\\Ctype\\' => array($vendorDir . '/symfony/polyfill-ctype'),
-    'Symfony\\Component\\String\\' => array($vendorDir . '/symfony/string'),
-    'PrestaShop\\Module\\PsEditionBasic\\' => array($baseDir . '/src'),
-    'PrestaShop\\ModuleLibServiceContainer\\' => array($vendorDir . '/prestashop/module-lib-service-container/src'),
-    'PrestaShop\\ModuleLibCacheDirectoryProvider\\' => array($vendorDir . '/prestashop/module-lib-cache-directory-provider/src'),
+    'PrestaShop\\Module\\Edition\\' => array($baseDir . '/src'),
 );

@@ -472,6 +472,14 @@ return [
         '/api/translations/reset' => [[['_route' => 'api_translation_value_reset', '_controller' => 'prestashop.core.api.translation.controller:translationResetAction', '_legacy_controller' => 'AdminTranslations'], null, ['POST' => 0], null, false, false, null]],
         '/api/improve/design/positions/update' => [[['_route' => 'api_improve_design_positions_update', '_controller' => 'prestashop.core.api.improve.design.postions.controller:updateAction', '_legacy_controller' => 'AdminModulesPositions'], null, ['POST' => 0], null, false, false, null]],
         '/api/oauth2/token' => [[['_route' => 'api_oauth2', '_controller' => 'PrestaShopBundle\\Controller\\Api\\OAuth2\\AccessTokenController'], null, ['POST' => 0], null, false, false, null]],
+        '/modules/mbo/modules/catalog' => [[['_route' => 'admin_mbo_catalog_module', '_controller' => 'mbo.controller.modules.catalog:indexAction', '_legacy_controller' => 'AdminPsMboModule', '_legacy_link' => ['AdminPsMboModuleParent', 'AdminPsMboModule']], null, ['GET' => 0], null, true, false, null]],
+        '/modules/mbo/modules/catalog/selection' => [[['_route' => 'admin_mbo_catalog_module_selection', '_controller' => 'mbo.controller.modules.selection:indexAction', '_legacy_controller' => 'AdminPsMboSelection', '_legacy_link' => 'AdminPsMboSelection'], null, ['GET' => 0], null, false, false, null]],
+        '/modules/mbo/modules/catalog/cdc_error' => [[['_route' => 'admin_mbo_module_cdc_error', '_controller' => 'mbo.controller.modules.catalog:cdcErrorAction'], null, ['GET' => 0], null, false, false, null]],
+        '/modules/mbo/modules/recommended' => [[['_route' => 'admin_mbo_recommended_modules', '_controller' => 'mbo.controller.modules.recommended:indexAction', '_legacy_controller' => 'AdminPsMboRecommended', '_legacy_link' => 'AdminPsMboRecommended'], null, ['GET' => 0], null, true, false, null]],
+        '/modules/mbo/themes/catalog' => [[['_route' => 'admin_mbo_catalog_theme', '_controller' => 'mbo.controller.themes.catalog:indexAction', '_legacy_controller' => 'AdminPsMboTheme', '_legacy_link' => 'AdminPsMboTheme'], null, ['GET' => 0], null, true, false, null]],
+        '/modules/mbo/addons/login' => [[['_route' => 'admin_mbo_addons_login', '_controller' => 'mbo.controller.addons:loginAction'], null, ['POST' => 0], null, false, false, null]],
+        '/modules/mbo/addons/logout' => [[['_route' => 'admin_mbo_addons_logout', '_controller' => 'mbo.controller.addons:logoutAction'], null, ['GET' => 0], null, false, false, null]],
+        '/modules/mbo/addons/modules/upgrade' => [[['_route' => 'admin_mbo_addons_module_upgrade', '_controller' => 'mbo.controller.addons:upgradeModuleAction'], null, ['POST' => 0], null, false, false, null]],
         '/modules/link-widget/list' => [[['_route' => 'admin_link_block_list', '_controller' => 'PrestaShop\\Module\\LinkList\\Controller\\Admin\\Improve\\Design\\LinkBlockController::listAction', '_legacy_controller' => 'AdminLinkWidget', '_legacy_link' => 'AdminLinkWidget'], null, ['GET' => 0], null, false, false, null]],
         '/modules/link-widget/create' => [
             [['_route' => 'admin_link_block_create', '_controller' => 'PrestaShop\\Module\\LinkList\\Controller\\Admin\\Improve\\Design\\LinkBlockController::createAction', '_legacy_controller' => 'AdminLinkWidget'], null, ['GET' => 0], null, false, false, null],
@@ -1005,12 +1013,15 @@ return [
                     .')'
                     .'|hook\\-status/(\\d+)(*:10414)'
                 .')'
-                .'|/modules/link\\-widget/(?'
-                    .'|edit/([^/]++)(?'
-                        .'|(*:10466)'
+                .'|/modules/(?'
+                    .'|mbo/modules/catalog/see_more/(\\d+)(*:10471)'
+                    .'|link\\-widget/(?'
+                        .'|edit/([^/]++)(?'
+                            .'|(*:10513)'
+                        .')'
+                        .'|delete/(\\d+)(*:10536)'
+                        .'|update\\-positions/(\\d+)(*:10569)'
                     .')'
-                    .'|delete/(\\d+)(*:10489)'
-                    .'|update\\-positions/(\\d+)(*:10522)'
                 .')'
             .')/?$}sD',
     ],
@@ -1322,12 +1333,13 @@ return [
         10349 => [[['_route' => 'api_feature_flags_post_collection', '_api_item_operation_name' => 'api_feature_flags_post_collection', '_api_identifiers' => [], '_api_has_composite_identifier' => false, '_controller' => 'api_platform.action.placeholder', '_format' => null, '_stateless' => null, '_api_resource_class' => 'PrestaShopBundle\\Entity\\FeatureFlag', '_api_operation_name' => 'api_feature_flags_post_collection'], ['_format'], ['POST' => 0], null, false, true, null]],
         10385 => [[['_route' => 'api_feature_flags_put_item', '_api_item_operation_name' => 'api_feature_flags_put_item', '_api_identifiers' => ['id'], '_api_has_composite_identifier' => false, '_controller' => 'api_platform.action.placeholder', '_format' => null, '_stateless' => null, '_api_resource_class' => 'PrestaShopBundle\\Entity\\FeatureFlag', '_api_operation_name' => 'api_feature_flags_put_item'], ['id', '_format'], ['PUT' => 0], null, false, true, null]],
         10414 => [[['_route' => '_api_/hook-status/{id}_get', '_controller' => 'api_platform.action.placeholder', '_format' => null, '_stateless' => null, '_api_resource_class' => 'PrestaShopBundle\\Api\\Resource\\HookStatus', '_api_operation_name' => '_api_/hook-status/{id}_get'], ['id'], ['GET' => 0], null, false, true, null]],
-        10466 => [
+        10471 => [[['_route' => 'admin_mbo_module_see_more', '_controller' => 'mbo.controller.modules.catalog:seeMoreAction'], ['moduleId'], ['GET' => 0], null, false, true, null]],
+        10513 => [
             [['_route' => 'admin_link_block_edit', '_controller' => 'PrestaShop\\Module\\LinkList\\Controller\\Admin\\Improve\\Design\\LinkBlockController::editAction', '_legacy_controller' => 'AdminLinkWidget'], ['linkBlockId'], ['GET' => 0], null, false, true, null],
             [['_route' => 'admin_link_block_edit_process', '_controller' => 'PrestaShop\\Module\\LinkList\\Controller\\Admin\\Improve\\Design\\LinkBlockController::editProcessAction', '_legacy_controller' => 'AdminLinkWidget'], ['linkBlockId'], ['POST' => 0], null, false, true, null],
         ],
-        10489 => [[['_route' => 'admin_link_block_delete', '_controller' => 'PrestaShop\\Module\\LinkList\\Controller\\Admin\\Improve\\Design\\LinkBlockController::deleteAction', '_legacy_controller' => 'AdminLinkWidget'], ['linkBlockId'], ['POST' => 0], null, false, true, null]],
-        10522 => [
+        10536 => [[['_route' => 'admin_link_block_delete', '_controller' => 'PrestaShop\\Module\\LinkList\\Controller\\Admin\\Improve\\Design\\LinkBlockController::deleteAction', '_legacy_controller' => 'AdminLinkWidget'], ['linkBlockId'], ['POST' => 0], null, false, true, null]],
+        10569 => [
             [['_route' => 'admin_link_block_update_positions', '_controller' => 'PrestaShop\\Module\\LinkList\\Controller\\Admin\\Improve\\Design\\LinkBlockController::updatePositionsAction', '_legacy_controller' => 'AdminLinkWidget'], ['hookId'], ['POST' => 0], null, false, true, null],
             [null, null, null, null, false, false, 0],
         ],

@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.3.1, created on 2023-10-10 12:22:04
+/* Smarty version 4.3.1, created on 2023-10-18 15:00:30
   from '/opt/lampp/htdocs/sparkload/modules/dashgoals/views/templates/hook/config.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.1',
-  'unifunc' => 'content_652533dcc1d8a9_99803015',
+  'unifunc' => 'content_652fe4febcb307_32963479',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_652533dcc1d8a9_99803015 (Smarty_Internal_Template $_smarty_tpl) {
+function content_652fe4febcb307_32963479 (Smarty_Internal_Template $_smarty_tpl) {
 ?><section id="dashgoals_config" class="dash_config hide">
 	<header><i class="icon-wrench"></i> <?php echo call_user_func_array( $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['l'][0], array( array('s'=>'Configuration','d'=>'Admin.Global'),$_smarty_tpl ) );?>
 </header>

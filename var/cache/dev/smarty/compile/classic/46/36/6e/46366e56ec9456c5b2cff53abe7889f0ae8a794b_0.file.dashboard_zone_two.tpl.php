@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.3.1, created on 2023-10-10 12:22:04
+/* Smarty version 4.3.1, created on 2023-10-18 15:00:30
   from '/opt/lampp/htdocs/sparkload/modules/dashgoals/views/templates/hook/dashboard_zone_two.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.1',
-  'unifunc' => 'content_652533dcc18238_07033981',
+  'unifunc' => 'content_652fe4febc6dd2_23468832',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:./config.tpl' => 1,
   ),
 ),false)) {
-function content_652533dcc18238_07033981 (Smarty_Internal_Template $_smarty_tpl) {
+function content_652fe4febc6dd2_23468832 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="clearfix"></div>
 <?php echo '<script'; ?>
 >

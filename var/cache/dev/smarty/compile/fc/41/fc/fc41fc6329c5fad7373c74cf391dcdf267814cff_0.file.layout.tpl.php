@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.3.1, created on 2023-10-10 12:22:04
+/* Smarty version 4.3.1, created on 2023-10-18 15:00:30
   from '/opt/lampp/htdocs/sparkload/adminsparkload/themes/default/template/layout.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.1',
-  'unifunc' => 'content_652533dcd25b16_88375536',
+  'unifunc' => 'content_652fe4fed1aa04_59674242',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_652533dcd25b16_88375536 (Smarty_Internal_Template $_smarty_tpl) {
+function content_652fe4fed1aa04_59674242 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/opt/lampp/htdocs/sparkload/vendor/smarty/smarty/libs/plugins/modifier.count.php','function'=>'smarty_modifier_count',),));
 echo $_smarty_tpl->tpl_vars['header']->value;?>
 

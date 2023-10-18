@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.3.1, created on 2023-10-10 12:22:05
+/* Smarty version 4.3.1, created on 2023-10-18 15:00:31
   from '/opt/lampp/htdocs/sparkload/adminsparkload/themes/default/public/preload.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.1',
-  'unifunc' => 'content_652533dd6f2e98_66915183',
+  'unifunc' => 'content_652fe4ffc86e61_92445469',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_652533dd6f2e98_66915183 (Smarty_Internal_Template $_smarty_tpl) {
+function content_652fe4ffc86e61_92445469 (Smarty_Internal_Template $_smarty_tpl) {
 ?><link
       rel="preload"
       href="<?php echo $_smarty_tpl->tpl_vars['admin_dir']->value;?>

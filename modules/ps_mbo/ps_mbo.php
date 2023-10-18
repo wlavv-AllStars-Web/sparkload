@@ -52,7 +52,7 @@ class ps_mbo extends Module
     /**
      * @var string
      */
-    public const VERSION = '4.5.1';
+    public const VERSION = '4.5.3';
 
     public const CONTROLLERS_WITH_CONNECTION_TOOLBAR = [
         'AdminPsMboModule',
@@ -103,7 +103,7 @@ class ps_mbo extends Module
     public function __construct()
     {
         $this->name = 'ps_mbo';
-        $this->version = '4.5.1';
+        $this->version = '4.5.3';
         $this->author = 'PrestaShop';
         $this->tab = 'administration';
         $this->module_key = '6cad5414354fbef755c7df4ef1ab74eb';
@@ -171,7 +171,7 @@ class ps_mbo extends Module
         $this->getAdminAuthenticationProvider()->deletePossibleApiUser();
         $this->getAdminAuthenticationProvider()->clearCache();
 
-        $lockFiles = ['registerShop', 'updateShop'];
+        $lockFiles = ['registerShop', 'updateShop', 'createApiUser'];
         foreach ($lockFiles as $lockFile) {
             if (file_exists($this->moduleCacheDir . $lockFile . '.lock')) {
                 unlink($this->moduleCacheDir . $lockFile . '.lock');
@@ -439,7 +439,7 @@ class ps_mbo extends Module
         $lockFile = $this->moduleCacheDir . 'translate_tabs.lock';
         if (!file_exists($lockFile)) {
             if (!is_dir($this->moduleCacheDir)) {
-                mkdir($this->moduleCacheDir);
+                mkdir($this->moduleCacheDir, 0777, true);
             }
             $f = fopen($lockFile, 'w+');
             fclose($f);

@@ -213,4 +213,13 @@
   212 => 'Symfony\\Component\\HttpKernel\\Controller\\TraceableArgumentResolver',
   213 => 'Symfony\\Component\\HttpKernel\\Controller\\TraceableControllerResolver',
   214 => 'Symfony\\Component\\Security\\Http\\Controller\\UserValueResolver',
+  215 => 'PrestaShop\\Module\\Mbo\\Api\\Controller\\AbstractAdminApiController',
+  216 => 'PrestaShop\\Module\\Mbo\\Controller\\Admin\\AddonsController',
+  217 => 'PrestaShop\\Module\\Mbo\\Controller\\Admin\\ModuleCatalogController',
+  218 => 'PrestaShop\\Module\\Mbo\\Controller\\Admin\\ModuleRecommendedController',
+  219 => 'PrestaShop\\Module\\Mbo\\Controller\\Admin\\ModuleSelectionController',
+  220 => 'PrestaShop\\Module\\Mbo\\Controller\\Admin\\ThemeCatalogController',
+  221 => 'PrestaShop\\Module\\PsAccounts\\Controller\\AbstractRestController',
+  222 => 'PrestaShop\\Module\\PsAccounts\\Controller\\AbstractShopRestController',
+  223 => 'PrestaShop\\Module\\PsAccounts\\Entity\\EmployeeAccount',
 );
