@@ -71,7 +71,6 @@
 *.hot-update.js
 *.hot-update.json
 
-
 /admin-dev/autoupgrade/*
 !/admin-dev/autoupgrade/index.php
 !/admin-dev/autoupgrade/backup/index.php
